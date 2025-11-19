@@ -47,32 +47,30 @@ export default async function Home() {
 
     return (
       <HomeThemeProvider>
-        <Section size="4">
-          <Box className="container" data-content-version={CONTENT_VERSION}>
-            <div className="prose dark:prose-invert max-w-none">
-              <Mdx
-                source={content}
-                layout={frontmatter.layout}
-                components={{
-                  // Map markdown elements and custom components expected by the home MDX
-                  h1: (props) => <Heading as="h1" size="9" mb="2" {...props} />,
-                  img: (imgProps) => (
-                    <MDXImage {...imgProps} originPath="/" backLabel={pageTitle} />
-                  ),
-                  FeatureBox,
-                  // Expose Radix primitives and NextLink for MDX usage
-                  Heading,
-                  Text,
-                  Box,
-                  Flex,
-                  Button,
-                  NextLink,
-                }}
-              />
-            </div>
-            <Mermaid autoRender={true} />
-          </Box>
-        </Section>
+        <Box data-content-version={CONTENT_VERSION}>
+          <div className="prose dark:prose-invert max-w-none">
+            <Mdx
+              source={content}
+              layout={frontmatter.layout}
+              components={{
+                // Map markdown elements and custom components expected by the home MDX
+                h1: (props) => <Heading as="h1" size="9" mb="2" {...props} />,
+                img: (imgProps) => (
+                  <MDXImage {...imgProps} originPath="/" backLabel={pageTitle} />
+                ),
+                FeatureBox,
+                // Expose Radix primitives and NextLink for MDX usage
+                Heading,
+                Text,
+                Box,
+                Flex,
+                Button,
+                NextLink,
+              }}
+            />
+          </div>
+          <Mermaid autoRender={true} />
+        </Box>
         <FloatingTOC />
       </HomeThemeProvider>
     )

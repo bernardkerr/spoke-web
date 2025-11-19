@@ -2,19 +2,24 @@
 template: Home
 ---
 
-# SPOKE ROBOTICS
+<ScrollScrubVideo 
+  src="/assets/Spoke-home-video02.mp4" 
+  height="1500vh"
+>
+  <Box className="container" style={{ color: 'black' }}>
+    
+    # SPOKE Robotics
 
-**A composable robotics ecosystem for researchers, prototypers, and students.**
+    <div style={{ marginTop: '-10px' }}>
 
-<video 
-  src="/assets/Spoke-home-video01.mp4" 
-  autoPlay 
-  loop 
-  muted 
-  playsInline
-  controls
-  style={{ width: '100%', height: 'auto' }}
-/>
+    **A composable robotics ecosystem for researchers, prototypers, and students.**
+
+    </div>
+
+  </Box>
+</ScrollScrubVideo>
+
+<Box className="container">
 
 <div style={{ textAlign: 'center', marginTop: '1rem' }}>
   <a href="https://my.spline.design/spoke12-NPxQakxmLYvO5xqnC1DQ3zgz/" target="_blank" rel="noopener noreferrer" style={{ color: 'white', textDecoration: 'underline' }}>
@@ -23,3 +28,5 @@ template: Home
 </div>
 
 <NewsletterForm />
+
+</Box>
