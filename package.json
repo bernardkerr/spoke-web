@@ -59,6 +59,7 @@
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.1",
     "remark-rehype": "^11.1.2",
+    "scrolly-video": "^0.0.24",
     "three": "^0.179.1"
   },
   "devDependencies": {

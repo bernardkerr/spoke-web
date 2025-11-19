@@ -2,69 +2,69 @@
 @import "./figma-tokens.css";
 
 /* Base CSS variables */
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
-    
-    /* Custom design tokens */
-    --brand: 221 83% 53%;
-    --bg: 0 0% 100%;
-    --fg: 222.2 84% 4.9%;
-    
-    /* Hex versions for SVG theming */
-    --brand-hex: #3b82f6;
-    --bg-hex: #ffffff;
-    --fg-hex: #1f2937;
-    --muted-foreground-hex: #6b7280;
-    --muted-hex: #f9fafb;
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 0.5rem;
 
-    /* Radix palettes backed by Figma tokens */
-    /* Accent: blue */
-    --blue-1: var(--color-scheme-colors-blue-1);
-    --blue-2: var(--color-scheme-colors-blue-2);
-    --blue-3: var(--color-scheme-colors-blue-3);
-    --blue-4: var(--color-scheme-colors-blue-4);
-    --blue-5: var(--color-scheme-colors-blue-5);
-    --blue-6: var(--color-scheme-colors-blue-6);
-    --blue-7: var(--color-scheme-colors-blue-7);
-    --blue-8: var(--color-scheme-colors-blue-8);
-    --blue-9: var(--color-scheme-colors-blue-9);
-    --blue-10: var(--color-scheme-colors-blue-10);
-    --blue-11: var(--color-scheme-colors-blue-11);
-    --blue-12: var(--color-scheme-colors-blue-12);
+  /* Custom design tokens */
+  --brand: 221 83% 53%;
+  --bg: 0 0% 100%;
+  --fg: 222.2 84% 4.9%;
 
-    /* Neutrals: slate as gray */
-    --gray-1: var(--color-scheme-colors-slate-1);
-    --gray-2: var(--color-scheme-colors-slate-2);
-    --gray-3: var(--color-scheme-colors-slate-3);
-    --gray-4: var(--color-scheme-colors-slate-4);
-    --gray-5: var(--color-scheme-colors-slate-5);
-    --gray-6: var(--color-scheme-colors-slate-6);
-    --gray-7: var(--color-scheme-colors-slate-7);
-    --gray-8: var(--color-scheme-colors-slate-8);
-    --gray-9: var(--color-scheme-colors-slate-9);
-    --gray-10: var(--color-scheme-colors-slate-10);
-    --gray-11: var(--color-scheme-colors-slate-11);
-    --gray-12: var(--color-scheme-colors-slate-12);
-  }
+  /* Hex versions for SVG theming */
+  --brand-hex: #3b82f6;
+  --bg-hex: #ffffff;
+  --fg-hex: #1f2937;
+  --muted-foreground-hex: #6b7280;
+  --muted-hex: #f9fafb;
+
+  /* Radix palettes backed by Figma tokens */
+  /* Accent: blue */
+  --blue-1: var(--color-scheme-colors-blue-1);
+  --blue-2: var(--color-scheme-colors-blue-2);
+  --blue-3: var(--color-scheme-colors-blue-3);
+  --blue-4: var(--color-scheme-colors-blue-4);
+  --blue-5: var(--color-scheme-colors-blue-5);
+  --blue-6: var(--color-scheme-colors-blue-6);
+  --blue-7: var(--color-scheme-colors-blue-7);
+  --blue-8: var(--color-scheme-colors-blue-8);
+  --blue-9: var(--color-scheme-colors-blue-9);
+  --blue-10: var(--color-scheme-colors-blue-10);
+  --blue-11: var(--color-scheme-colors-blue-11);
+  --blue-12: var(--color-scheme-colors-blue-12);
+
+  /* Neutrals: slate as gray */
+  --gray-1: var(--color-scheme-colors-slate-1);
+  --gray-2: var(--color-scheme-colors-slate-2);
+  --gray-3: var(--color-scheme-colors-slate-3);
+  --gray-4: var(--color-scheme-colors-slate-4);
+  --gray-5: var(--color-scheme-colors-slate-5);
+  --gray-6: var(--color-scheme-colors-slate-6);
+  --gray-7: var(--color-scheme-colors-slate-7);
+  --gray-8: var(--color-scheme-colors-slate-8);
+  --gray-9: var(--color-scheme-colors-slate-9);
+  --gray-10: var(--color-scheme-colors-slate-10);
+  --gray-11: var(--color-scheme-colors-slate-11);
+  --gray-12: var(--color-scheme-colors-slate-12);
+}
 
 /* STL Viewer: keep default card border like other viewers; allow overlays to escape */
 .stlviewer-card.rt-Card {
@@ -74,65 +74,74 @@
   background-color: transparent !important;
   overflow: visible !important;
 }
+
 .stlviewer-frame {
-  overflow: visible !important; /* ensure overlay controls are not clipped */
+  overflow: visible !important;
+  /* ensure overlay controls are not clipped */
 }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    
-    /* Custom design tokens for dark mode */
-    --brand: 221 83% 53%;
-    --bg: 222.2 84% 4.9%;
-    --fg: 210 40% 98%;
-    
-    /* Hex versions for dark mode SVG theming */
-    --brand-hex: #3b82f6;
-    --bg-hex: #0f172a;
-    --fg-hex: #f8fafc;
-    --muted-foreground-hex: #94a3b8;
-    --muted-hex: #334155;
-  }
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+
+  /* Custom design tokens for dark mode */
+  --brand: 221 83% 53%;
+  --bg: 222.2 84% 4.9%;
+  --fg: 210 40% 98%;
+
+  /* Hex versions for dark mode SVG theming */
+  --brand-hex: #3b82f6;
+  --bg-hex: #0f172a;
+  --fg-hex: #f8fafc;
+  --muted-foreground-hex: #94a3b8;
+  --muted-hex: #334155;
+}
+
 /* Global element defaults */
 * {
   border-color: var(--theme-colors-neutral-neutral-6);
 }
+
 body {
   background-color: var(--theme-tokens-colors-surface, var(--theme-colors-default-white));
   color: var(--theme-colors-neutral-neutral-12);
-  margin: 0; /* extend navbar background to edges, remove default UA margin */
+  margin: 0;
+  /* extend navbar background to edges, remove default UA margin */
 }
 
 /* Base responsive typography: slightly smaller on mobile to improve fit */
 html {
   font-size: 16px;
 }
+
 @media (max-width: 480px) {
   html {
-    font-size: 13px; /* ~-19% for small phones */
+    font-size: 13px;
+    /* ~-19% for small phones */
   }
 }
+
 @media (max-width: 360px) {
   html {
-    font-size: 12.5px; /* ~-22% for ultra-small viewports */
+    font-size: 12.5px;
+    /* ~-22% for ultra-small viewports */
   }
 }
 
@@ -141,6 +150,7 @@ html {
   color: inherit;
   text-decoration: none;
 }
+
 .anchor-link:hover {
   text-decoration: underline;
 }
@@ -209,13 +219,17 @@ html {
   border: none !important;
   background-color: transparent !important;
 }
+
 .rt-Card {
-  border: none !important; /* remove any outer line completely */
-  box-shadow: inset 0 0 0 1px var(--gray-a6) !important; /* single crisp line */
+  border: none !important;
+  /* remove any outer line completely */
+  box-shadow: inset 0 0 0 1px var(--gray-a6) !important;
+  /* single crisp line */
   background-color: transparent !important;
   border-radius: var(--radius-3) !important;
   background-clip: padding-box;
-  overflow: visible; /* prevent clipping of absolutely positioned children */
+  overflow: visible;
+  /* prevent clipping of absolutely positioned children */
 }
 
 /* Remove any variant-driven rings/outlines */
@@ -237,6 +251,7 @@ html {
   backdrop-filter: saturate(180%) blur(4px);
   box-shadow: inset 0 0 0 1px var(--gray-a6) !important;
 }
+
 /* Dark theme: use a darker, more opaque panel for better contrast */
 .dark .floating-toc-card.rt-Card,
 .dark .floating-toc-card.rt-Card.rt-variant-surface {
@@ -258,16 +273,20 @@ html {
   backdrop-filter: saturate(180%) blur(4px);
   border-radius: var(--radius-2);
   box-shadow: inset 0 0 0 1px var(--gray-a6);
-  z-index: 10; /* above card content */
+  z-index: 10;
+  /* above card content */
   opacity: 0;
   transition: opacity .15s ease;
-  pointer-events: none; /* prevent catching hover when hidden */
+  pointer-events: none;
+  /* prevent catching hover when hidden */
 }
+
 .floating-toc:hover .toc-toggle {
   opacity: 1;
   pointer-events: auto;
   cursor: pointer;
 }
+
 .floating-toc .toc-toggle .line {
   display: block;
   width: 14px;
@@ -275,6 +294,7 @@ html {
   background-color: var(--gray-9);
   border-radius: 2px;
 }
+
 .floating-toc .toc-toggle .line.active {
   height: 3px;
   background-color: var(--gray-12);
@@ -294,9 +314,11 @@ html {
   backdrop-filter: saturate(180%) blur(4px);
   border-radius: var(--radius-2);
   box-shadow: inset 0 0 0 1px var(--gray-a6);
-  z-index: 10000; /* above most content */
+  z-index: 10000;
+  /* above most content */
   cursor: pointer;
 }
+
 .floating-toc-toggle-alone .line {
   display: block;
   width: 14px;
@@ -304,6 +326,7 @@ html {
   background-color: var(--gray-9);
   border-radius: 2px;
 }
+
 .floating-toc-toggle-alone .line.active {
   height: 3px;
   background-color: var(--gray-12);
@@ -321,18 +344,40 @@ html {
 
 /* Floating TOC: hide Radix ScrollArea scrollbar by default (remove bottom highlight)
    and only reveal on hover or when mobile TOC is open */
-.floating-toc .rt-ScrollAreaScrollbar { display: none !important; }
-.floating-toc .rt-ScrollAreaThumb { display: none !important; }
+.floating-toc .rt-ScrollAreaScrollbar {
+  display: none !important;
+}
+
+.floating-toc .rt-ScrollAreaThumb {
+  display: none !important;
+}
+
 /* Hide native scrollbars in the TOC viewport; scrolling still works */
-.floating-toc .rt-ScrollAreaViewport { scrollbar-width: none; }
-.floating-toc .rt-ScrollAreaViewport::-webkit-scrollbar { width: 0; height: 0; }
+.floating-toc .rt-ScrollAreaViewport {
+  scrollbar-width: none;
+}
+
+.floating-toc .rt-ScrollAreaViewport::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 /* Prevent horizontal scroll and hide horizontal scrollbar/corner entirely */
-.floating-toc .rt-ScrollAreaViewport { overflow-x: hidden !important; }
-.floating-toc .rt-ScrollAreaScrollbar[data-orientation="horizontal"] { display: none !important; }
-.floating-toc .rt-ScrollAreaCorner { display: none !important; }
+.floating-toc .rt-ScrollAreaViewport {
+  overflow-x: hidden !important;
+}
+
+.floating-toc .rt-ScrollAreaScrollbar[data-orientation="horizontal"] {
+  display: none !important;
+}
+
+.floating-toc .rt-ScrollAreaCorner {
+  display: none !important;
+}
 
 /* Hide floating TOC entirely on mobile/tablet */
 @media (max-width: 1023.98px) {
+
   .floating-toc,
   .floating-toc-toggle-alone {
     display: none !important;
@@ -348,8 +393,10 @@ html {
 .mobile-toc-button {
   position: fixed;
   right: 12px;
-  top: calc(80px + 12px); /* a bit further below navbar */
-  z-index: 30; /* navbar is 40; keep this below so it never blocks nav */
+  top: calc(80px + 12px);
+  /* a bit further below navbar */
+  z-index: 30;
+  /* navbar is 40; keep this below so it never blocks nav */
   width: 30px;
   height: 30px;
   border-radius: var(--radius-2);
@@ -362,23 +409,41 @@ html {
   justify-content: center;
   cursor: pointer;
 }
-.mobile-toc-button .hamburger { display: inline-flex; flex-direction: column; gap: 3px; }
-.mobile-toc-button .hamburger span { display:block; width:18px; height:2px; background: var(--gray-12); border-radius:2px; }
+
+.mobile-toc-button .hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mobile-toc-button .hamburger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--gray-12);
+  border-radius: 2px;
+}
 
 .mobile-toc-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   /* Behind the floating TOC when open on mobile */
   z-index: 9998;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
-.mobile-toc-panel.rt-Card { width: 100%; max-width: 640px; margin: 0 8px 16px; }
+
+.mobile-toc-panel.rt-Card {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 8px 16px;
+}
 
 /* When open on mobile, reveal the normal floating TOC */
 @media (max-width: 1023.98px) {
+
   html.mobile-toc-open .floating-toc,
   .mobile-toc-open body .floating-toc {
     display: block !important;
@@ -388,6 +453,7 @@ html {
     visibility: visible !important;
     opacity: 1 !important;
   }
+
   /* Hide the desktop-only placement toggle gadget while in mobile TOC mode */
   html.mobile-toc-open .floating-toc .toc-toggle,
   .mobile-toc-open body .floating-toc .toc-toggle {
@@ -397,7 +463,11 @@ html {
 
 /* Only show MobileTOC on <= lg */
 @media (min-width: 1024px) {
-  .mobile-toc-button, .mobile-toc-overlay { display: none !important; }
+
+  .mobile-toc-button,
+  .mobile-toc-overlay {
+    display: none !important;
+  }
 }
 
 /* Disable pseudo-element borders/rings some themes add */
@@ -418,12 +488,14 @@ html {
   display: flex;
   flex-direction: column;
 }
+
 .app-main {
   flex: 1 1 auto;
   /* Provide small gutters on narrow viewports so content isn't edge-to-edge */
   padding-left: 16px;
   padding-right: 16px;
 }
+
 @media (min-width: 1024px) {
   .app-main {
     padding-left: 0;
@@ -440,12 +512,20 @@ html {
   padding-left: 16px;
   padding-right: 16px;
 }
+
 /* On small screens, app-main provides the gutters.
    Remove default container padding to avoid double gutters,
    but keep padding for the navbar's container for alignment. */
 @media (max-width: 1023.98px) {
-  .container { padding-left: 0; padding-right: 0; }
-  .navbar .container { padding-left: 16px; padding-right: 16px; }
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 /* Navbar styles (replaces Tailwind utilities used in Navbar.jsx) */
@@ -454,29 +534,38 @@ html {
   top: 0;
   z-index: 40;
   width: 100%;
-  background-color: #000; /* black */
+  background-color: #000;
+  /* black */
   color: #fff;
   backdrop-filter: saturate(180%) blur(8px);
 }
+
 .navbar-inner {
   display: flex;
   align-items: center;
-  height: var(--theme-tokens-space-navbar-height, 60px); /* tokenized navbar height */
+  height: var(--theme-tokens-space-navbar-height, 60px);
+  /* tokenized navbar height */
 }
+
 .navbar-brand {
   display: flex;
   align-items: center;
   margin-right: 24px;
-  flex: 1 1 auto; /* allow the brand row to span available width */
-  justify-content: space-between; /* logo left, links right */
+  flex: 1 1 auto;
+  /* allow the brand row to span available width */
+  justify-content: space-between;
+  /* logo left, links right */
 }
+
 .navbar-logo {
   /* Ensure logo renders at its intrinsic SVG size */
   max-width: none;
-  width: 140px;  /* give SVG without intrinsic size a concrete width on desktop */
+  width: 140px;
+  /* give SVG without intrinsic size a concrete width on desktop */
   height: auto;
   display: block;
 }
+
 .navbar-links {
   display: flex;
   align-items: center;
@@ -485,12 +574,16 @@ html {
   font-size: 0.875rem;
   font-weight: 500;
 }
+
 .navbar-links a {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color .15s ease;
 }
-.navbar-links a:hover { color: rgba(255,255,255,0.85); }
+
+.navbar-links a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
 
 /* Theme toggle: look and behave like a link (no accent colors) */
 .navbar-links .themetoggle {
@@ -502,21 +595,25 @@ html {
   padding: 0;
   border: none;
   background: transparent;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   transition: color .15s ease, opacity .15s ease;
   cursor: pointer;
 }
+
 .navbar-links .themetoggle:hover {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
+
 .navbar-links .themetoggle svg {
   display: block;
 }
+
 .navbar-links .themetoggle:focus-visible {
-  outline: 2px solid rgba(255,255,255,0.4);
+  outline: 2px solid rgba(255, 255, 255, 0.4);
   outline-offset: 2px;
   border-radius: 4px;
 }
+
 .navbar-right {
   margin-left: auto;
   display: flex;
@@ -533,15 +630,19 @@ html {
     padding-bottom: 8px;
     row-gap: 8px;
   }
+
   .navbar-brand {
     width: 100%;
     margin-right: 0;
     justify-content: space-between;
   }
+
   .navbar-logo {
-    width: 120px; /* keep logo reasonable on mobile */
+    width: 120px;
+    /* keep logo reasonable on mobile */
     height: auto;
   }
+
   .navbar-links {
     width: 100%;
     flex-wrap: wrap;
@@ -557,29 +658,38 @@ html {
   top: 0;
   z-index: 40;
   width: 100%;
-  background-color: #000; /* black */
+  background-color: #000;
+  /* black */
   color: #fff;
   backdrop-filter: saturate(180%) blur(8px);
 }
+
 .home-navbar-inner {
   display: flex;
   align-items: center;
-  height: var(--theme-tokens-space-navbar-height, 60px); /* tokenized navbar height */
+  height: var(--theme-tokens-space-navbar-height, 60px);
+  /* tokenized navbar height */
 }
+
 .home-navbar-brand {
   display: flex;
   align-items: center;
   margin-right: 24px;
-  flex: 1 1 auto; /* allow the brand row to span available width */
-  justify-content: space-between; /* logo left, links right */
+  flex: 1 1 auto;
+  /* allow the brand row to span available width */
+  justify-content: space-between;
+  /* logo left, links right */
 }
+
 .home-navbar-logo {
   /* Ensure logo renders at its intrinsic SVG size */
   max-width: none;
-  width: 140px;  /* give SVG without intrinsic size a concrete width on desktop */
+  width: 140px;
+  /* give SVG without intrinsic size a concrete width on desktop */
   height: auto;
   display: block;
 }
+
 .home-navbar-links {
   display: flex;
   align-items: center;
@@ -588,12 +698,16 @@ html {
   font-size: 0.875rem;
   font-weight: 500;
 }
+
 .home-navbar-links a {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color .15s ease;
 }
-.home-navbar-links a:hover { color: rgba(255,255,255,0.85); }
+
+.home-navbar-links a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
 
 /* Home navbar theme toggle */
 .home-navbar-links .themetoggle {
@@ -605,20 +719,56 @@ html {
   padding: 0;
   border: none;
   background: transparent;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   transition: color .15s ease, opacity .15s ease;
   cursor: pointer;
 }
+
 .home-navbar-links .themetoggle:hover {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
+
 .home-navbar-links .themetoggle svg {
   display: block;
 }
+
 .home-navbar-links .themetoggle:focus-visible {
-  outline: 2px solid rgba(255,255,255,0.4);
+  outline: 2px solid rgba(255, 255, 255, 0.4);
   outline-offset: 2px;
   border-radius: 4px;
+}
+
+/* ScrollyVideo - crop instead of squish */
+#scrolly-video,
+[id^="scrolly-video-"] {
+  overflow: hidden !important;
+}
+
+#scrolly-video video,
+[id^="scrolly-video-"] video,
+#scrolly-video canvas,
+[id^="scrolly-video-"] canvas {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+}
+
+/* Also target any wrapper divs the library might create */
+#scrolly-video>div,
+[id^="scrolly-video-"]>div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#scrolly-video>div>video,
+[id^="scrolly-video-"]>div>video,
+#scrolly-video>div>canvas,
+[id^="scrolly-video-"]>div>canvas {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* Home navbar responsive behavior */
@@ -630,15 +780,20 @@ html {
     padding-bottom: 8px;
     row-gap: 8px;
   }
+
+
   .home-navbar-brand {
     width: 100%;
     margin-right: 0;
     justify-content: space-between;
   }
+
   .home-navbar-logo {
-    width: 120px; /* keep logo reasonable on mobile */
+    width: 120px;
+    /* keep logo reasonable on mobile */
     height: auto;
   }
+
   .home-navbar-links {
     width: 100%;
     flex-wrap: wrap;
@@ -653,14 +808,24 @@ html {
   border-top: 1px solid var(--theme-colors-neutral-neutral-6);
   padding: 16px 0;
 }
+
 .site-footer-inner {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
+
 @media (min-width: 768px) {
-  .site-footer { padding: 0; }
-  .site-footer-inner { height: 96px; flex-direction: row; align-items: center; justify-content: space-between; }
+  .site-footer {
+    padding: 0;
+  }
+
+  .site-footer-inner {
+    height: 96px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 /* Mermaid container helper */
@@ -682,30 +847,35 @@ html {
   font-weight: var(--theme-typography-font-weight-bold);
   margin: 1.5rem 0 0.75rem;
 }
+
 .prose h2 {
   font-size: var(--theme-typography-font-size-7);
   line-height: var(--theme-typography-line-height-7);
   font-weight: var(--theme-typography-font-weight-bold);
   margin: 1.25rem 0 0.5rem;
 }
+
 .prose h3 {
   font-size: var(--theme-typography-font-size-6);
   line-height: var(--theme-typography-line-height-6);
   font-weight: var(--theme-typography-font-weight-medium);
   margin: 1rem 0 0.5rem;
 }
+
 .prose h4 {
   font-size: var(--theme-typography-font-size-5);
   line-height: var(--theme-typography-line-height-5);
   font-weight: var(--theme-typography-font-weight-medium);
   margin: 0.75rem 0 0.5rem;
 }
+
 .prose h5 {
   font-size: var(--theme-typography-font-size-4);
   line-height: var(--theme-typography-line-height-4);
   font-weight: var(--theme-typography-font-weight-medium);
   margin: 0.5rem 0 0.25rem;
 }
+
 .prose h6 {
   font-size: var(--theme-typography-font-size-3);
   line-height: var(--theme-typography-line-height-3);
@@ -722,7 +892,8 @@ html {
   /* Default max width narrower than container for readability */
   max-width: min(100%, 900px);
   height: auto;
-  margin: 16px auto; /* center */
+  margin: 16px auto;
+  /* center */
 }
 
 /* Opt-out: any media inside .not-prose should follow its container without prose constraints */
@@ -737,14 +908,44 @@ html {
 }
 
 /* Optional size helpers (opt-in via class="sm|md|lg|full") */
-.prose img.sm { max-width: 360px; }
-.prose img.md { max-width: 600px; }
-.prose img.lg { max-width: 900px; }
-.prose img.full { max-width: 100%; }
+.prose img.sm {
+  max-width: 360px;
+}
+
+.prose img.md {
+  max-width: 600px;
+}
+
+.prose img.lg {
+  max-width: 900px;
+}
+
+.prose img.full {
+  max-width: 100%;
+}
+
+.prose video.full-width {
+  max-width: 100%;
+}
+
+.full-width-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
 
 /* Figure support */
-.prose figure { margin: 24px auto; text-align: center; }
-.prose figcaption { font-size: 0.9rem; color: var(--muted-foreground-hex); margin-top: 8px; }
+.prose figure {
+  margin: 24px auto;
+  text-align: center;
+}
+
+.prose figcaption {
+  font-size: 0.9rem;
+  color: var(--muted-foreground-hex);
+  margin-top: 8px;
+}
 
 /* Card content typography using figma tokens */
 .card-title {
@@ -770,18 +971,23 @@ html {
   align-items: start;
   margin: var(--theme-spacing-7) 0;
 }
+
 @media (min-width: 1024px) {
   .sideimages-row {
     grid-template-columns: 1.2fr 0.8fr;
     gap: var(--theme-spacing-8);
   }
 }
+
 .sideimages-text {
-  min-width: 0; /* allow content to shrink within grid */
+  min-width: 0;
+  /* allow content to shrink within grid */
 }
+
 .sideimages-aside {
   position: relative;
 }
+
 .sideimages-imageStack {
   display: flex;
   flex-direction: column;
@@ -789,28 +995,34 @@ html {
   position: sticky;
   top: var(--theme-spacing-7);
 }
+
 /* On mobile, don't stick */
 @media (max-width: 1023.98px) {
   .sideimages-imageStack {
     position: static;
   }
 }
+
 .sideimages-image {
   display: block;
   width: 100%;
   height: auto;
   max-width: 100%;
-  margin: 0; /* override .prose img margins */
+  margin: 0;
+  /* override .prose img margins */
   border: none;
   border-radius: var(--theme-radius-3);
   background-color: transparent;
 }
+
 .sideimages-image--full {
   border-radius: var(--theme-radius-4);
 }
+
 .sideimages-fullwidth {
   margin: var(--theme-spacing-7) 0;
 }
+
 .sideimages-fullwidthStack {
   display: flex;
   flex-direction: column;
