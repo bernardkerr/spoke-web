@@ -64,9 +64,13 @@ export default function ScrollScrubVideo({
             />
 
             <Box
+                className="not-prose"
                 style={{
                     height: height,
-                    position: 'relative'
+                    position: 'relative',
+                    width: '100vw',
+                    marginLeft: 'calc(-50vw + 50%)',
+                    marginRight: 'calc(-50vw + 50%)'
                 }}
             >
                 {/* ScrollyVideo container - library handles sticky positioning */}
