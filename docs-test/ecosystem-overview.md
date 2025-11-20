@@ -1,4 +1,4 @@
-# **SPOKE** Ecosystem
+# SPOKE Ecosystem
 
 Making robots is hard. It really takes a team of specialists to make a better robot. As a researcher, prototyper, or student, you likely specialize in one area \- but building a robot requires expertise across three domains:
 
@@ -17,4 +17,14 @@ Every **SPOKE** Part is verified for mechanical fit, electrical compatibility, a
 The **SPOKE** Composer software will verify your new robot design before you build, create a parts list, and a set of assembly instructions. This enables anyone to create new configurations, share robot designs, and contribute AI models built on this reliable foundation.
 
 **Make Better Robots.**
+
+<SetSticker
+  setNumber="012652"
+  title="FOUR WHEELER"
+  units="3"
+  parts="154"
+  qrcode="spoke-set-qrcode-012652.png"
+  image="spoke-set-image-012652.png"
+/>
+
 
