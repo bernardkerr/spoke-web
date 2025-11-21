@@ -2,8 +2,8 @@
 
 import { Box } from '@radix-ui/themes'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import QRCode from 'qrcode'
+import { useEffect, useState, useRef } from 'react'
+import QRCodeStyling from 'qr-code-styling'
 
 export default function SetSticker({ setNumber, title, units, parts, qrcode, image, backgroundColor = '#e8e8e8' }) {
     // Construct image paths relative to docs-test/images
@@ -11,19 +11,45 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
     const imagePath = `/docs-test/images/${image}`
 
     const [qrCodeSvg, setQrCodeSvg] = useState('')
+    const qrCodeRef = useRef(null)
 
     useEffect(() => {
         if (setNumber) {
             const url = `https://spoke-robotics.com/set=${setNumber}`
-            QRCode.toString(url, {
-                type: 'svg',
+
+            const qrCode = new QRCodeStyling({
+                width: 100,
+                height: 100,
+                data: url,
                 margin: 0,
-                color: {
-                    dark: '#000000',
-                    light: '#00000000' // Transparent background
+                qrOptions: {
+                    typeNumber: 0,
+                    mode: 'Byte',
+                    errorCorrectionLevel: 'Q'
+                },
+                dotsOptions: {
+                    color: '#000000',
+                    type: 'rounded'
+                },
+                backgroundOptions: {
+                    color: 'transparent'
+                },
+                cornersSquareOptions: {
+                    color: '#000000',
+                    type: 'extra-rounded'
+                },
+                cornersDotOptions: {
+                    color: '#000000',
+                    type: 'extra-rounded'
                 }
-            }, (err, string) => {
-                if (!err) setQrCodeSvg(string)
+            })
+
+            qrCode.getRawData('svg').then((blob) => {
+                const reader = new FileReader()
+                reader.onload = () => {
+                    setQrCodeSvg(reader.result)
+                }
+                reader.readAsText(blob)
             })
         }
     }, [setNumber])
@@ -168,9 +194,11 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                     <div
                         dangerouslySetInnerHTML={{ __html: qrCodeSvg }}
                         style={{
-                            width: '60px',
-                            height: '60px',
-                            display: 'block',
+                            width: '100px',
+                            height: '100px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                         }}
                     />
                 )}
