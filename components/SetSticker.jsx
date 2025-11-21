@@ -5,10 +5,13 @@ import Image from 'next/image'
 import { useEffect, useState, useRef } from 'react'
 import QRCodeStyling from 'qr-code-styling'
 
+import { getImagePath } from '@/lib/paths'
+
 export default function SetSticker({ setNumber, title, units, parts, qrcode, image, backgroundColor = '#e8e8e8' }) {
     // Construct image paths relative to docs-test/images
-    const logoPath = '/docs-test/images/spoke-set-logo.png'
-    const imagePath = `/docs-test/images/${image}`
+    // getImagePath handles rewriting /docs-test/images -> /content/images and prepending basePath
+    const logoPath = getImagePath('/docs-test/images/spoke-set-logo.png')
+    const imagePath = getImagePath(`/docs-test/images/${image}`)
 
     const [qrCodeSvg, setQrCodeSvg] = useState('')
     const qrCodeRef = useRef(null)
