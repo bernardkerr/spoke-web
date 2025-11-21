@@ -184,9 +184,9 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
             <div
                 style={{
                     display: 'flex',
-                    alignItems: 'center',
+                    alignItems: image ? 'center' : 'flex-start',
                     justifyContent: 'flex-start',
-                    padding: '4px 20px 4px 20px',
+                    padding: '16px 20px 16px 20px',
                     gap: '16px',
                 }}
             >
@@ -209,13 +209,15 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                         }}
                     />
                 )}
-                <Image
-                    src={imagePath}
-                    alt={title}
-                    width={80}
-                    height={80}
-                    style={{ display: 'block', objectFit: 'contain' }}
-                />
+                {image && (
+                    <Image
+                        src={imagePath}
+                        alt={title}
+                        width={80}
+                        height={64}
+                        style={{ display: 'block', objectFit: 'cover', margin: 0, padding: 0 }}
+                    />
+                )}
             </div>
             {/* Bottom border */}
             <div style={{ borderBottom: '2px solid #000' }} />
