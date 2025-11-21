@@ -2,18 +2,37 @@
 
 import { Box } from '@radix-ui/themes'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import QRCode from 'qrcode'
 
-export default function SetSticker({ setNumber, title, units, parts, qrcode, image, bgcolor = '#e8e8e8' }) {
+export default function SetSticker({ setNumber, title, units, parts, qrcode, image, backgroundColor = '#e8e8e8' }) {
     // Construct image paths relative to docs-test/images
     const logoPath = '/docs-test/images/spoke-set-logo.png'
-    const qrcodePath = `/docs-test/images/${qrcode}`
     const imagePath = `/docs-test/images/${image}`
+
+    const [qrCodeSvg, setQrCodeSvg] = useState('')
+
+    useEffect(() => {
+        if (setNumber) {
+            const url = `https://spoke-robotics.com/set=${setNumber}`
+            QRCode.toString(url, {
+                type: 'svg',
+                margin: 0,
+                color: {
+                    dark: '#000000',
+                    light: '#00000000' // Transparent background
+                }
+            }, (err, string) => {
+                if (!err) setQrCodeSvg(string)
+            })
+        }
+    }, [setNumber])
 
     return (
         <Box
             style={{
                 width: '200px',
-                backgroundColor: bgcolor,
+                backgroundColor: backgroundColor,
                 padding: '0',
                 fontFamily: 'monospace',
                 display: 'inline-block',
@@ -139,29 +158,32 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
             <div
                 style={{
                     display: 'flex',
-                    alignItems: 'center',
+                    alignItems: 'flex-start',
                     justifyContent: 'flex-start',
-                    padding: '0 0 0 20px',
+                    padding: '0px 20px',
                     gap: '16px',
-                    marginTop: '-5px',
-                    marginBottom: '-5px',
                 }}
             >
-                <Image
-                    src={qrcodePath}
-                    alt="QR Code"
-                    width={80}
-                    height={80}
-                    style={{ display: 'block', marginLeft: '-10px', marginRight: '-10px' }}
-                />
+                {qrCodeSvg && (
+                    <div
+                        dangerouslySetInnerHTML={{ __html: qrCodeSvg }}
+                        style={{
+                            width: '60px',
+                            height: '60px',
+                            display: 'block',
+                        }}
+                    />
+                )}
                 <Image
                     src={imagePath}
                     alt={title}
                     width={80}
                     height={80}
-                    style={{ display: 'block', objectFit: 'contain', marginLeft: '-1px', marginRight: '-10px' }}
+                    style={{ display: 'block', objectFit: 'contain' }}
                 />
             </div>
+            {/* Bottom border */}
+            <div style={{ borderBottom: '2px solid #000' }} />
         </Box >
     )
 }
