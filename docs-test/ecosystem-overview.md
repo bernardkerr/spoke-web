@@ -23,7 +23,6 @@ The **SPOKE** Composer software will verify your new robot design before you bui
   title="FOUR WHEELER"
   units="3"
   parts="154"
-  qrcode="spoke-set-qrcode-012652.png"
   image="spoke-set-image-012652.png"
 />
 

@@ -1045,3 +1045,10 @@ html {
 a:hover .mdximage-zoom-overlay {
   opacity: 1;
 }
+
+/* Force QR code SVG to fill its container */
+.not-prose svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+}

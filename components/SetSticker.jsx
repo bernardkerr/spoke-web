@@ -18,8 +18,8 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
             const url = `https://spoke-robotics.com/set=${setNumber}`
 
             const qrCode = new QRCodeStyling({
-                width: 100,
-                height: 100,
+                width: 200,
+                height: 200,
                 data: url,
                 margin: 0,
                 qrOptions: {
@@ -184,21 +184,28 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
             <div
                 style={{
                     display: 'flex',
-                    alignItems: 'flex-start',
+                    alignItems: 'center',
                     justifyContent: 'flex-start',
-                    padding: '0px 20px',
+                    padding: '4px 20px 4px 20px',
                     gap: '16px',
                 }}
             >
                 {qrCodeSvg && (
                     <div
+                        className="not-prose"
                         dangerouslySetInnerHTML={{ __html: qrCodeSvg }}
                         style={{
-                            width: '100px',
-                            height: '100px',
+                            width: '64px',
+                            height: '64px',
+                            minWidth: '64px',
+                            minHeight: '64px',
+                            maxWidth: '64px',
+                            maxHeight: '64px',
+                            flexShrink: 0,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
+                            overflow: 'hidden',
                         }}
                     />
                 )}
