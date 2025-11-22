@@ -18,12 +18,16 @@ The **SPOKE** Composer software will verify your new robot design before you bui
 
 **Make Better Robots.**
 
+
 <SetSticker
   setNumber="012652"
-  title="FOUR WHEELER"
+  title="FOUR WHEELER make it"
   units="3"
   parts="154"
   image="spoke-set-image-012652.png"
 />
-
-
+<br/>
+<br/>
+<QRCode
+  text="https://spoke-robotics.com/set=999"
+/> 
