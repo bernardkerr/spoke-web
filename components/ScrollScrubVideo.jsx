@@ -84,6 +84,7 @@ export default function ScrollScrubVideo({
                 {/* Overlay content - needs its own sticky positioning */}
                 {props.children && (
                     <Box
+                        className="scrollscrub-overlay"
                         style={{
                             position: 'sticky',
                             top: 0,

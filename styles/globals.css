@@ -782,13 +782,13 @@ html {
   [id^="scrolly-video-"] video,
   #scrolly-video canvas,
   [id^="scrolly-video-"] canvas {
-    width: 200% !important;
+    width: 250% !important;
     max-width: none !important;
     height: 100% !important;
     position: absolute !important;
     left: 50% !important;
     top: 0 !important;
-    transform: translate(-50%, 0) scale(0.5) !important;
+    transform: translate(-50%, 0) scale(0.4) !important;
     transform-origin: center top !important;
   }
 }
@@ -799,6 +799,14 @@ html {
   padding-right: 16px !important;
 }
 
+/* Disable sticky title overlay on mobile - use absolute so it starts at top but scrolls off */
+@media (max-width: 430px) {
+  .scrollscrub-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
 
 /* Home navbar responsive behavior */
 @media (max-width: 767.98px) {
