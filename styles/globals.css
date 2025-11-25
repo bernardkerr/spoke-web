@@ -773,7 +773,24 @@ html {
 [id^="scrolly-video-"]>div>canvas {
   object-fit: cover !important;
   width: 100% !important;
-  height: 100% !important;
+}
+
+/* Scale video on iPhone dimensions (max-width: 430px) */
+@media (max-width: 430px) {
+
+  #scrolly-video video,
+  [id^="scrolly-video-"] video,
+  #scrolly-video canvas,
+  [id^="scrolly-video-"] canvas {
+    width: 200% !important;
+    max-width: none !important;
+    height: 100% !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    transform: translate(-50%, 0) scale(0.5) !important;
+    transform-origin: center top !important;
+  }
 }
 
 /* Ensure containers inside ScrollScrubVideo always have padding, even on small screens */
