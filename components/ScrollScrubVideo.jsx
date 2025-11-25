@@ -75,7 +75,7 @@ export default function ScrollScrubVideo({
                 }}
             >
                 {/* ScrollyVideo container - library handles sticky positioning */}
-                <div id={containerId} style={{
+                <div id={containerId} className="scrollscrub-video-container" style={{
                     width: '100%',
                     overflow: 'hidden',
                     position: 'relative'
@@ -99,7 +99,10 @@ export default function ScrollScrubVideo({
                             marginTop: '-100vh' // Pull overlay up to cover video
                         }}
                     >
-                        <Box style={{ pointerEvents: 'auto', width: '100%' }}>
+                        {/* Background color block for mobile */}
+                        <div className="scrollscrub-bg-block" />
+
+                        <Box style={{ pointerEvents: 'auto', width: '100%', position: 'relative', zIndex: 1 }}>
                             {props.children}
                         </Box>
                     </Box>
