@@ -811,7 +811,8 @@ html {
     right: 0;
     width: 100%;
     height: 220px;
-    background-color: #eaeaea;
+    background-color: #e5e5e5 !important;
+    opacity: 1 !important;
     z-index: 0;
     /* Behind the text content which has z-index: 1 */
   }
