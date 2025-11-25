@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Box } from '@radix-ui/themes'
 import Script from 'next/script'
+import { withBase } from '@/lib/basePath'
 
 export default function ScrollScrubVideo({
     src,
@@ -33,7 +34,7 @@ export default function ScrollScrubVideo({
             console.log('Initializing ScrollyVideo from CDN...')
             instanceRef.current = new window.ScrollyVideo({
                 scrollyVideoContainer: containerId,
-                src: src,
+                src: withBase(src),
                 // The library handles sticky positioning if we don't interfere
                 // We might need to ensure the parent has height
             })
