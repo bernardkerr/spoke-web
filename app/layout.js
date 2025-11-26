@@ -1,4 +1,4 @@
-import { IBM_Plex_Mono } from 'next/font/google'
+import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google'
 import { NavbarWrapper } from '@/components/NavbarWrapper'
 import { FooterWrapper } from '@/components/FooterWrapper'
 import { getTopLevelContentFiles } from '@/lib/markdown'
@@ -6,7 +6,17 @@ import '@/styles/globals.css'
 import '@radix-ui/themes/styles.css'
 import RadixThemeProvider from '@/components/providers/RadixThemeProvider'
 
-const ibmPlexMono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400','500','600','700'] })
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-ibm-plex-mono'
+})
+
+const ibmPlexSans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-ibm-plex-sans'
+})
 
 export const metadata = {
   metadataBase: new URL('https://spoke-robotics.com'),
@@ -40,7 +50,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={ibmPlexMono.className}>
+      <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${ibmPlexMono.className}`}>
         <RadixThemeProvider>
           <div className="app-root">
             <NavbarWrapper topLevelPages={topLevelPages} />

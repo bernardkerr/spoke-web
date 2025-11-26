@@ -21,7 +21,7 @@ The **SPOKE** Composer software will verify your new robot design before you bui
 
 <SetSticker
   setNumber="012652"
-  title="FOUR WHEELER make it"
+  title="FOUR WHEELER"
   units="3"
   parts="154"
   image="spoke-set-image-012652.png"
