@@ -95,7 +95,7 @@ export default async function StylesInspectorPage() {
   }
 
   return (
-    <Section size="4">
+    <Section size="2">
       <Box mx="auto" style={{ maxWidth: 1200, width: '100%' }}>
         <TokensViewerClient
           tokensJson={tokensJson}

@@ -17,10 +17,10 @@ import {
 export default function TestPage() {
   return (
     <>
-    <Section size="4">
+    <Section size="2">
       <Box className="container">
         <Box mb="5">
-          <Heading size="9">Test</Heading>
+          <Heading size="8">Test</Heading>
           <Text as="p" color="gray" size="4">These pages highlight the capabilities of the site.</Text>
         </Box>
 

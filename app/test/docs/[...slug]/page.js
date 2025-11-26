@@ -2,8 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { notFound } from 'next/navigation'
-import { 
-  getMarkdownFilesFromRoots, 
+import {
+  getMarkdownFilesFromRoots,
   getAllMarkdownSlugsFromRoots
 } from '@/lib/markdown'
 import { Mermaid } from '@/components/Mermaid'
@@ -47,10 +47,10 @@ export default async function DocPage({ params }) {
 
   return (
     <>
-      <Section size="4">
+      <Section size="2">
         <Box mx="auto" style={{ maxWidth: 1200, width: '100%' }} data-content-version={CONTENT_VERSION}>
           <Box mb="5">
-            <Heading size="9">{pageTitle}</Heading>
+            <Heading size="8">{pageTitle}</Heading>
             {fm && fm.description && (
               <Text as="p" color="gray" size="4">{fm.description}</Text>
             )}

@@ -89,10 +89,10 @@ export default async function DocsIndexPage() {
   }
 
   return (
-    <Section size="4">
+    <Section size="2">
       <Box className="container">
         <Box mb="5">
-          <Heading size="9">Documentation</Heading>
+          <Heading size="8">Documentation</Heading>
           <Text as="p" color="gray" size="4">
             System Documentation
           </Text>

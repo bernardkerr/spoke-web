@@ -50,7 +50,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${ibmPlexMono.className}`}>
+      <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${ibmPlexSans.className}`}>
         <RadixThemeProvider>
           <div className="app-root">
             <NavbarWrapper topLevelPages={topLevelPages} />

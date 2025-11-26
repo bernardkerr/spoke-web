@@ -41,10 +41,10 @@ export default async function DocPage({ params }) {
     const title = 'Documentation Not Available'
     return (
       <>
-        <Section size="4">
+        <Section size="2">
           <Box className="container" data-content-version={CONTENT_VERSION}>
             <Box mb="5">
-              <Heading size="9">{title}</Heading>
+              <Heading size="8">{title}</Heading>
               <Text as="p" color="gray" size="4">
                 Git submodules under <code>docs-submodules/</code> are not initialized. This placeholder exists so static export can succeed.
               </Text>
@@ -89,10 +89,10 @@ export default async function DocPage({ params }) {
 
   return (
     <>
-      <Section size="4">
+      <Section size="2">
         <Box className="container" data-content-version={CONTENT_VERSION}>
           <Box mb="5">
-            <Heading size="9">{pageTitle}</Heading>
+            <Heading size="8">{pageTitle}</Heading>
             {frontmatter.description && (
               <Text as="p" color="gray" size="4">
                 {frontmatter.description}

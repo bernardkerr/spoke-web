@@ -84,13 +84,13 @@ export default async function Home() {
   // Fallback to existing hard-coded content
   return (
     <HomeThemeProvider>
-      <Section size="4">
+      <Section size="2">
         <Box className="container" data-content-version={CONTENT_VERSION}>
           {process.env.NODE_ENV !== 'production' && (
             <Text size="1" color="gray" mb="2">[Dev] Fallback homepage JSX</Text>
           )}
           <Box style={{ textAlign: 'center' }}>
-            <Heading size="9" mb="2">Welcome to Spoke</Heading>
+            <Heading size="8" mb="2">Welcome to Spoke</Heading>
             <Text as="p" size="4" color="gray">
               A modern design system and development toolkit.
             </Text>

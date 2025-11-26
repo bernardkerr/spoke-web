@@ -16,10 +16,10 @@ export default async function UnderDevelopmentPage() {
   const description = 'This section is currently being worked on.'
 
   return (
-    <Section size="4">
+    <Section size="2">
       <Box mx="auto" style={{ maxWidth: 900, width: '100%' }}>
         <Box mb="5">
-          <Heading size="9">{pageTitle}</Heading>
+          <Heading size="8">{pageTitle}</Heading>
           <Text as="p" color="gray" size="4">{description}</Text>
         </Box>
 

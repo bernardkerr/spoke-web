@@ -4,7 +4,7 @@ import ResetStoreButton from '@/components/designer/ResetStoreButton'
 
 export default function SystemViewerPage() {
   return (
-    <Section size="4">
+    <Section size="2">
       <Box className="container">
         <Flex mb="5" justify="between" align="start" gap="3">
           <Box>

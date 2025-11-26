@@ -80,7 +80,7 @@ export default async function TopLevelContentPage({ params }) {
     // Read the content file from content directory
     const filePath = path.join(process.cwd(), 'content', `${slug}.mdx`)
     let fileContents
-    
+
     // Try .mdx first, then .md
     if (fs.existsSync(filePath)) {
       fileContents = fs.readFileSync(filePath, 'utf8')
@@ -106,17 +106,17 @@ export default async function TopLevelContentPage({ params }) {
 
     return (
       <>
-        <Section size="4">
+        <Section size="2">
           <Box className="container" data-content-version={CONTENT_VERSION}>
             <Box mb="5">
-              <Heading size="9">
+              <Heading size="8">
                 {pageTitle}
               </Heading>
               {frontmatter.description && (
                 <Text as="p" color="gray" size="4">{frontmatter.description}</Text>
               )}
             </Box>
-            
+
             <div className="prose dark:prose-invert max-w-none">
               <Mdx
                 source={cleanedSource}

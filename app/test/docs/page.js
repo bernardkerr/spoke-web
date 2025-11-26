@@ -16,10 +16,10 @@ export default async function DocsPage() {
   const files = await getMarkdownFilesFromRoots(['docs-test'])
 
   return (
-    <Section size="4">
+    <Section size="2">
       <Box mx="auto" style={{ maxWidth: 1200, width: '100%' }}>
         <Box mb="5">
-          <Heading size="9">Documentation</Heading>
+          <Heading size="8">Documentation</Heading>
           <Text as="p" color="gray" size="4">
             Browse our documentation powered by Markdown files from Git submodules.
           </Text>
