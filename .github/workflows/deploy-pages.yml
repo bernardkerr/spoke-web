@@ -33,18 +33,30 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Configure build environment
+        id: config
+        run: |
+          if [ "${{ github.repository }}" == "bernardkerr/spoke-web" ]; then
+            echo "Configuring for Fork (bernardkerr/spoke-web)"
+            echo "NEXT_PUBLIC_BASE_PATH=/spoke-web" >> $GITHUB_ENV
+            echo "create_cname=false" >> $GITHUB_OUTPUT
+          else
+            echo "Configuring for Production (spoke-robotics.com)"
+            echo "NEXT_PUBLIC_BASE_PATH=" >> $GITHUB_ENV
+            echo "create_cname=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build static site (Next.js export)
         env:
           NODE_ENV: production
-          # For GitHub Pages on a project repo, base path should be "/<repo-name>"
-          # For a custom domain served at the root (e.g., spoke-robotics.com), leave base path empty
-          NEXT_PUBLIC_BASE_PATH: ""
         run: |
           npm run build
+
       - name: Disable Jekyll
         run: touch out/.nojekyll
 
       - name: Add CNAME for custom domain
+        if: steps.config.outputs.create_cname == 'true'
         run: echo spoke-robotics.com > out/CNAME
 
       - name: Upload artifact

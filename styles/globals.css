@@ -773,7 +773,26 @@ html {
 [id^="scrolly-video-"]>div>canvas {
   object-fit: cover !important;
   width: 100% !important;
-  height: 100% !important;
+}
+
+/* Scale video on iPhone dimensions (max-width: 430px) */
+@media (max-width: 430px) {
+
+  #scrolly-video video,
+  [id^="scrolly-video-"] video,
+  #scrolly-video canvas,
+  [id^="scrolly-video-"] canvas {
+    width: 200% !important;
+    max-width: none !important;
+    height: 100% !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 220px !important;
+    /* Start video below the 220px color block */
+    transform: translateX(-50%) scale(0.5) !important;
+    transform-origin: top center !important;
+    object-fit: cover !important;
+  }
 }
 
 /* Ensure containers inside ScrollScrubVideo always have padding, even on small screens */
@@ -782,6 +801,29 @@ html {
   padding-right: 16px !important;
 }
 
+/* Keep title overlay sticky on mobile but add background color block (220px high) */
+@media (max-width: 430px) {
+  .scrollscrub-bg-block {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 220px;
+    background-color: #e5e5e5 !important;
+    opacity: 1 !important;
+    z-index: 0;
+    /* Behind the text content which has z-index: 1 */
+  }
+}
+
+/* Hide background block on desktop */
+@media (min-width: 431px) {
+  .scrollscrub-bg-block {
+    display: none;
+  }
+}
 
 /* Home navbar responsive behavior */
 @media (max-width: 767.98px) {
@@ -1044,4 +1086,11 @@ html {
 /* MDXImage overlay hover (moved from styled-jsx to avoid invalid nesting) */
 a:hover .mdximage-zoom-overlay {
   opacity: 1;
+}
+
+/* Force QR code SVG to fill its container */
+.not-prose svg {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
 }
