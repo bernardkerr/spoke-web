@@ -57,10 +57,10 @@ gitgraph
 
 export default function MermaidPage() {
   return (
-    <Section size="4">
+    <Section size="2">
       <Box mx="auto" style={{ maxWidth: 1200, width: '100%' }}>
         <Box mb="5">
-          <Heading size="9">Mermaid Diagrams</Heading>
+          <Heading size="8">Mermaid Diagrams</Heading>
           <Text as="p" color="gray" size="4">
             Beautiful diagrams and flowcharts with site-themed Mermaid integration. These diagrams automatically adapt to your light/dark theme preferences.
           </Text>

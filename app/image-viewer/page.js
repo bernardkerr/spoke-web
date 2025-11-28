@@ -16,7 +16,7 @@ function ImageViewerContent() {
   const imageLabel = useMemo(() => (alt && alt.trim()) ? alt : '', [alt])
 
   return (
-    <Section size="4">
+    <Section size="2">
       <Box mx="auto" style={{ maxWidth: 1400, width: '100%' }}>
         <Box mb="4" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <Button asChild variant="soft" color="gray">
@@ -64,7 +64,7 @@ export default function ImageViewerPage() {
   return (
     <Suspense
       fallback={(
-        <Section size="4">
+        <Section size="2">
           <Box mx="auto" style={{ maxWidth: 1400, width: '100%' }}>
             <Box
               style={{

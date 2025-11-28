@@ -70,7 +70,6 @@ export default function SetPageClient({
                 <div style={{
                     width: '100%',
                     aspectRatio: '1/1',
-                    backgroundColor: '#ebebeb',
                     marginBottom: '20px',
                     position: 'relative',
                     display: 'flex',
@@ -83,7 +82,7 @@ export default function SetPageClient({
                             alt={title}
                             width={750}
                             height={750}
-                            style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                            style={{ objectFit: 'cover', width: '100%', height: '100%', margin: 0 }}
                         />
                     )}
                 </div>
@@ -119,7 +118,7 @@ export default function SetPageClient({
                                     alt={`Thumbnail ${idx}`}
                                     width={100}
                                     height={100}
-                                    style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                                    style={{ objectFit: 'contain', width: '100%', height: '100%', margin: 0 }}
                                 />
                             </div>
                             <div style={{
@@ -142,7 +141,7 @@ export default function SetPageClient({
                 {/* Title and Price */}
                 <div style={{ marginBottom: '10px' }}>
                     <h1 style={{
-                        fontSize: '22pt',
+                        fontSize: '22px',
                         fontWeight: 'bold',
                         margin: '0 0 10px 0',
                         lineHeight: '1.2'
@@ -150,7 +149,7 @@ export default function SetPageClient({
                         {title}
                     </h1>
                     {price && (
-                        <div style={{ fontSize: '22pt', fontWeight: 'normal' }}>
+                        <div style={{ fontSize: '22px', fontWeight: 'normal' }}>
                             {price}
                         </div>
                     )}
@@ -165,7 +164,7 @@ export default function SetPageClient({
                             justifyContent: 'space-between',
                             alignItems: 'center',
                             cursor: 'pointer',
-                            fontSize: '16pt',
+                            fontSize: '16px',
                             height: '60px',
                             paddingRight: '20px',
                             width: '100%',
@@ -178,7 +177,7 @@ export default function SetPageClient({
                         {unitsOpen ? <ChevronUp size={20} strokeWidth={1.5} /> : <ChevronDown size={20} strokeWidth={1.5} />}
                     </div>
                     {unitsOpen && unitText && (
-                        <div style={{ paddingBottom: '20px', fontSize: '16pt', color: '#808080' }}>
+                        <div style={{ paddingBottom: '20px', fontSize: '16px', color: '#808080' }}>
                             {unitText.split(',').map((line, i) => (
                                 <div key={i}>{line.trim()}</div>
                             ))}
@@ -195,7 +194,7 @@ export default function SetPageClient({
                             justifyContent: 'space-between',
                             alignItems: 'center',
                             cursor: 'pointer',
-                            fontSize: '16pt',
+                            fontSize: '16px',
                             height: '60px',
                             paddingRight: '20px',
                             width: '100%',
@@ -208,7 +207,7 @@ export default function SetPageClient({
                         {partsOpen ? <ChevronUp size={20} strokeWidth={1.5} /> : <ChevronDown size={20} strokeWidth={1.5} />}
                     </div>
                     {partsOpen && partsText && (
-                        <div style={{ paddingBottom: '20px', fontSize: '16pt', color: '#808080' }}>
+                        <div style={{ paddingBottom: '20px', fontSize: '16px', color: '#808080' }}>
                             {partsText}
                         </div>
                     )}
@@ -217,7 +216,7 @@ export default function SetPageClient({
                 {/* Description */}
                 <div style={{ borderTop: '1px solid #e0e0e0', padding: '20px 0' }}>
                     <div style={{
-                        fontSize: '16pt',
+                        fontSize: '16px',
                         color: '#808080',
                         lineHeight: '1.5',
                         fontFamily: 'var(--font-ibm-plex-sans), sans-serif'
@@ -228,12 +227,12 @@ export default function SetPageClient({
 
                 {/* Features */}
                 <div style={{ padding: '20px 0' }}>
-                    <div style={{ fontSize: '16pt', fontWeight: 'bold', marginBottom: '10px' }}>Features</div>
+                    <div style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '10px' }}>Features</div>
                     <ul style={{
                         listStyleType: 'disc',
                         paddingLeft: '20px',
                         margin: 0,
-                        fontSize: '16pt',
+                        fontSize: '16px',
                         color: '#808080',
                         lineHeight: '1.5',
                         fontFamily: 'var(--font-ibm-plex-sans), sans-serif'
@@ -246,8 +245,8 @@ export default function SetPageClient({
 
                 {/* Dimensions */}
                 <div style={{ borderTop: '1px solid #e0e0e0', padding: '20px 0' }}>
-                    <div style={{ fontSize: '16pt', fontWeight: 'bold', marginBottom: '10px' }}>Dimensions</div>
-                    <div style={{ fontSize: '16pt', color: '#808080' }}>
+                    <div style={{ fontSize: '16px', fontWeight: 'bold', marginBottom: '10px' }}>Dimensions</div>
+                    <div style={{ fontSize: '16px', color: '#808080' }}>
                         {dimensions}
                     </div>
                 </div>
@@ -260,7 +259,7 @@ export default function SetPageClient({
                         borderRadius: '25px',
                         padding: '0 30px',
                         height: '40px',
-                        fontSize: '16pt',
+                        fontSize: '16px',
                         fontWeight: 'bold',
                         cursor: 'pointer',
                         width: '100%',
@@ -283,7 +282,7 @@ export default function SetPageClient({
                     alignItems: 'center',
                     justifyContent: 'flex-start',
                     gap: '10px',
-                    fontSize: '16pt',
+                    fontSize: '16px',
                     width: '100%',
                     boxSizing: 'border-box',
                     paddingRight: '20px'
@@ -301,7 +300,7 @@ export default function SetPageClient({
                             justifyContent: 'space-between',
                             alignItems: 'center',
                             cursor: 'pointer',
-                            fontSize: '16pt',
+                            fontSize: '16px',
                             fontWeight: 'bold',
                             textTransform: 'uppercase',
                             height: '60px',
@@ -324,7 +323,7 @@ export default function SetPageClient({
                             justifyContent: 'space-between',
                             alignItems: 'center',
                             cursor: 'pointer',
-                            fontSize: '16pt',
+                            fontSize: '16px',
                             fontWeight: 'bold',
                             textTransform: 'uppercase',
                             height: '60px',
@@ -339,7 +338,7 @@ export default function SetPageClient({
                 </div>
 
                 {/* Computational Dropdown */}
-                <div style={{ borderTop: '1px solid #e0e0e0' }}>
+                <div style={{ borderTop: '1px solid #e0e0e0', borderBottom: '1px solid #e0e0e0' }}>
                     <div
                         onClick={() => setComputationalOpen(!computationalOpen)}
                         style={{
@@ -347,7 +346,7 @@ export default function SetPageClient({
                             justifyContent: 'space-between',
                             alignItems: 'center',
                             cursor: 'pointer',
-                            fontSize: '16pt',
+                            fontSize: '16px',
                             fontWeight: 'bold',
                             textTransform: 'uppercase',
                             height: '60px',
@@ -364,7 +363,7 @@ export default function SetPageClient({
                 {/* Set Number Footer */}
                 <div style={{
                     marginTop: '20px',
-                    fontSize: '16pt',
+                    fontSize: '16px',
                     fontWeight: 'bold',
                     display: 'flex',
                     flexDirection: 'row',
@@ -380,7 +379,7 @@ export default function SetPageClient({
                         alt="Spoke Logo"
                         width={24}
                         height={24}
-                        style={{ display: 'block' }}
+                        style={{ display: 'block', margin: 0 }}
                     />
                     <span style={{ flex: 1 }}>{setNumber}</span>
                 </div>

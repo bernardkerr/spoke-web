@@ -9,11 +9,11 @@ import { getDefaultModelCode } from '@/components/cad/OcModelBuilder'
 export default function CadTestPage() {
   const [_, setDummy] = useState(false) // placeholder to keep consistent client component
   return (
-    <Section size="4">
+    <Section size="2">
       <Box mx="auto" style={{ maxWidth: 1200, width: '100%' }}>
         <Box mb="5" style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 16 }}>
           <div>
-            <Heading size="9">CAD Viewer (Test)</Heading>
+            <Heading size="8">CAD Viewer (Test)</Heading>
             <Text as="p" color="gray" size="4">Reusable workbench demo.</Text>
           </div>
           <Button asChild variant="soft">

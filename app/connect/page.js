@@ -50,7 +50,7 @@ export default async function ConnectPage() {
 
     return (
       <>
-        <Section size="4">
+        <Section size="2">
           <Box className="container" data-content-version={CONTENT_VERSION}>
             <div className="prose dark:prose-invert max-w-none">
               <Mdx
@@ -84,10 +84,10 @@ export default async function ConnectPage() {
     }
     // Fallback
     return (
-      <Section size="4">
+      <Section size="2">
         <Box className="container" data-content-version={CONTENT_VERSION}>
           <Box style={{ textAlign: 'center' }}>
-            <Heading size="9" mb="2">Connect</Heading>
+            <Heading size="8" mb="2">Connect</Heading>
             <Text as="p" size="4" color="gray">
               Content not available.
             </Text>

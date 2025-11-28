@@ -43,10 +43,10 @@ export default async function CadMdDocPage({ params }) {
   const layout = (fm && (fm.layout || fm.renderer)) || undefined
 
   return (
-    <Section size="4">
+    <Section size="2">
       <Box mx="auto" style={{ maxWidth: 1200, width: '100%' }} data-content-version={CONTENT_VERSION}>
         <Box mb="5">
-          <Heading size="9">{pageTitle}</Heading>
+          <Heading size="8">{pageTitle}</Heading>
           <Text as="p" color="gray" size="4">
             Markdown rendered via MDX. <code>js cad</code> code fences are interactive (back-compat for <code>cadjs</code> is supported).
           </Text>

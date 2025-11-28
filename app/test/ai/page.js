@@ -7,7 +7,7 @@ import Chat from '@/components/ai/Chat'
 export default function AIPage() {
   return (
     <>
-      <Section size="4">
+      <Section size="2">
         <Box className="container">
           <Box mb="5">
             <Heading size="8">AI Experiments</Heading>

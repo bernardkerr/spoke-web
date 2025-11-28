@@ -16,10 +16,10 @@ export default function ThreePage() {
   const initialCode = `// Three.js Workbench demo (program mode)\n// Optionally return a lifecycle object to create a custom scene.\n// Tip: You can also return legacy props instead.\nreturn {\n  async setup({ THREE, add, materials, themeColors }) {\n    const geo = new THREE.TorusKnotGeometry(1.2, 0.35, 150, 16)\n    const mat = materials.standard({ color: themeColors.accent, roughness: 0.35, metalness: 0.2 })\n    const mesh = new THREE.Mesh(geo, mat)\n    add(mesh)\n    this.mesh = mesh\n  },\n  update({ dt }) { if (this.mesh) this.mesh.rotation.y += dt * 0.8 },\n  dispose({ remove }) { if (this.mesh) { remove(this.mesh); this.mesh.geometry.dispose(); this.mesh.material.dispose(); this.mesh = null } },\n  onPointerDown(e, { THREE, themeColors }) { if (this.mesh) { this.mesh.material.wireframe = !this.mesh.material.wireframe } },\n}`
 
   return (
-    <Section size="4">
+    <Section size="2">
       <Box mx="auto" style={{ maxWidth: 1200, width: '100%' }}>
         <Box mb="5">
-          <Heading size="9">Three.js Examples</Heading>
+          <Heading size="8">Three.js Examples</Heading>
           <Text as="p" color="gray" size="4">Interactive 3D graphics powered by Three.js and React Three Fiber.</Text>
         </Box>
 

@@ -3,6 +3,7 @@ import { NavbarWrapper } from '@/components/NavbarWrapper'
 import { FooterWrapper } from '@/components/FooterWrapper'
 import { getTopLevelContentFiles } from '@/lib/markdown'
 import '@/styles/globals.css'
+import '@/styles/details-collapsible.css'
 import '@radix-ui/themes/styles.css'
 import RadixThemeProvider from '@/components/providers/RadixThemeProvider'
 
@@ -50,7 +51,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${ibmPlexMono.className}`}>
+      <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${ibmPlexSans.className}`}>
         <RadixThemeProvider>
           <div className="app-root">
             <NavbarWrapper topLevelPages={topLevelPages} />

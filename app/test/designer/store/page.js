@@ -3,7 +3,7 @@ import StoreStatus from '@/components/designer/StoreStatus.jsx'
 
 export default function DesignerStorePage() {
   return (
-    <Section size="4">
+    <Section size="2">
       <Box className="container">
         <Box mb="5">
           <Heading size="8">Designer: Store</Heading>
