@@ -1,4 +1,4 @@
-# **SPOKE** Mechanical
+# **Mechanical**
 
 ## **Overview**
 
@@ -18,9 +18,13 @@ Each subsystem provides:
 **Protection** \- Enclosure and shielding for sensitive elements  
 **Integration** \- Provides cable routing and connector locations for electrical components
 </div>
----
 
-## **Integration**
+<details>
+<summary>
+
+## Integration
+
+</summary>
 <div style={{ marginLeft: '2rem' }}>
 The Mechanical subsystems work together as a verified system:
 
@@ -61,9 +65,13 @@ The Mechanical subsystems work together as a verified system:
 
 This integration ensures that when you assemble mechanical components, mounting aligns, motion is unobstructed, and connections to other domains work without custom adaptation.
 </div>
----
+</details>
+<details>
+<summary>
 
-## **1. Structure**
+## 1. Structure
+
+</summary>
 
 <div style={{ marginLeft: '2rem' }}>
 
@@ -165,9 +173,16 @@ Structure is a starting point, not a constraint:
 > **Full custom:** Define new dimensional standards for specialized applications
 </div>
 </div>
----
 
-## **2. Joints**
+</details>
+
+
+<details>
+<summary>
+
+## 2. Joints
+
+</summary>
 
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Joints**
@@ -255,9 +270,17 @@ All joint mechanisms include:
 > Bearing housings integrated into assemblies
 
 </div>
----
 
-## **3. Wheels**
+</details>
+
+
+<details>
+<summary>
+
+## 3. Wheels
+
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Wheels**
 
@@ -302,9 +325,17 @@ Complete verified integration path:
 > Cable routing maintains electrical connectivity
 
 </div>
----
 
-## **4. Grippers**
+</details>
+
+
+<details>
+<summary>
+
+## 4. Grippers
+
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Grippers**
 
@@ -373,3 +404,5 @@ All gripper mechanisms include:
 > Modular finger designs for task-specific swapping
 
 </div>
+
+</details>

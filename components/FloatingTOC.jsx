@@ -105,9 +105,9 @@ export default function FloatingTOC({ minHeadings = 3 }) {
     const onMobileTocOpen = () => setPosition('top')
     try {
       window.addEventListener('mobile-toc-open', onMobileTocOpen)
-    } catch {}
+    } catch { }
     return () => {
-      try { window.removeEventListener('mobile-toc-open', onMobileTocOpen) } catch {}
+      try { window.removeEventListener('mobile-toc-open', onMobileTocOpen) } catch { }
     }
   }, [])
 
@@ -122,23 +122,35 @@ export default function FloatingTOC({ minHeadings = 3 }) {
   const handleHeadingClick = (id) => {
     const element = document.getElementById(id)
     if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      // Check if the heading is inside a details element
+      const detailsElement = element.closest('details')
+      if (detailsElement && !detailsElement.open) {
+        // Open the details element if it's closed
+        detailsElement.open = true
+      }
+
+      // Get the element's position and account for navbar height
+      const navbarHeight = 70 // Approximate navbar + padding
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+      const offsetPosition = elementPosition - navbarHeight
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       })
     }
     // Notify listeners (MobileTOC) to close the overlay on selection
     try {
       window.dispatchEvent(new Event('floating-toc-select'))
-    } catch {}
+    } catch { }
   }
 
   const cyclePosition = () => {
     setPosition(prev => (
       prev === 'top' ? 'middle' :
-      prev === 'middle' ? 'bottom' :
-      prev === 'bottom' ? 'hidden' :
-      'top'
+        prev === 'middle' ? 'bottom' :
+          prev === 'bottom' ? 'hidden' :
+            'top'
     ))
   }
 
@@ -264,11 +276,11 @@ export default function FloatingTOC({ minHeadings = 3 }) {
                       boxShadow: 'none',
                       outline: 'none',
                       textDecoration: 'none',
-                      color: activeId === heading.id 
-                        ? 'var(--accent-11)' 
+                      color: activeId === heading.id
+                        ? 'var(--accent-11)'
                         : 'var(--gray-12)',
-                      backgroundColor: activeId === heading.id 
-                        ? 'var(--accent-3)' 
+                      backgroundColor: activeId === heading.id
+                        ? 'var(--accent-3)'
                         : 'transparent',
                       transition: 'all 0.2s ease'
                     }}

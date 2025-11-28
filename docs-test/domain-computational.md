@@ -20,9 +20,12 @@ Each subsystem provides:
 **AI integration** \- Pre-trained models work with verified sensor configurations
 </div>
 
----
+<details>
+<summary>
 
-## **Computational Domain Integration**
+## Integration
+
+</summary>
 <div style={{ marginLeft: '2rem' }}>
 The Computational subsystems work together as a verified system:
 
@@ -70,10 +73,14 @@ The Computational subsystems work together as a verified system:
 
 This integration ensures that when you assemble computational components, software recognizes hardware automatically, AI models work with available sensors, and high-level autonomy can immediately command the physical robot.
 </div>
+</details>
+<details>
+<summary>
 
----
+## 1. Operating System and Middleware
 
-## **1. Operating System & Middleware**
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of OS & Middleware**
 
@@ -149,9 +156,16 @@ The foundation layer connects all computational elements:
 > System ready for high-level control
 </div>
 
----
+</details>
 
-## **2. Control Software**
+
+<details>
+<summary>
+
+## 2. Control Software
+
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Control Software**
 
@@ -214,9 +228,16 @@ Control software operates at the boundary between computation and physical actio
 > State estimator updates robot configuration
 </div>
 
----
+</details>
 
-## **3. Perception & AI**
+
+<details>
+<summary>
+
+## 3. Perception and AI
+
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Perception & AI**
 
@@ -299,9 +320,16 @@ AI systems connect sensing to understanding:
 > Feedback loop enables continuous improvement
 </div>
 
----
+</details>
 
-## **4. Autonomy & Planning**
+
+<details>
+<summary>
+
+## 4. Autonomy and Planning
+
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Autonomy & Planning**
 
@@ -384,4 +412,4 @@ Autonomy software orchestrates the entire robot system:
 > Monitoring tracks progress and system health
 </div>
 
----
+</details>

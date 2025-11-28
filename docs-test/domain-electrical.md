@@ -20,9 +20,13 @@ Each subsystem provides:
 </div>
 
 
----
 
-## **Electrical Domain Integration**
+<details>
+<summary>
+
+## **Integration**
+
+</summary>
 <div style={{ marginLeft: '2rem' }}>
 The Electrical subsystems work together as a verified system:
 
@@ -64,9 +68,14 @@ The Electrical subsystems work together as a verified system:
 This integration ensures that when you assemble electrical components, power reaches all devices, signals transmit reliably, and the computational layer can immediately work with the available hardware.
 </div>
 
----
+</details>
+<details>
+<summary>
 
-## **1.Power**
+## 1. Power
+
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Power**
 
@@ -131,9 +140,15 @@ All power systems include:
 > Cable routing that prevents mechanical damage
 </div>
 
----
+</details>
 
-## **2.Controllers**
+<details>
+<summary>
+
+## 2. Controllers
+
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Controllers**
 
@@ -221,9 +236,15 @@ All controller systems include:
 > Firmware update capability without disassembly
 </div>
 
----
+</details>
 
-## **Compute**
+<details>
+<summary>
+
+## 3. Compute
+
+</summary>
+
 <div style={{ marginLeft: '2rem' }}>
 ### **The Role of Compute**
 
@@ -310,5 +331,5 @@ All compute systems include:
 > Remote access capability for development and monitoring
 </div>
 
----
+</details>
 
