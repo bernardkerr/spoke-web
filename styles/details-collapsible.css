@@ -15,7 +15,7 @@ details summary {
     display: flex;
     justify-content: flex-start;
     /* Align to start for left chevron */
-    align-items: flex-start;
+    align-items: center;
     cursor: pointer;
     font-size: var(--theme-typography-font-size-7);
     line-height: 1;
@@ -23,7 +23,6 @@ details summary {
     /* text-transform: uppercase; Removed to match H2 */
     height: 60px;
     padding-right: 20px;
-    padding-top: 18px;
     width: 100%;
     box-sizing: border-box;
     list-style: none;
@@ -39,7 +38,6 @@ details summary::-webkit-details-marker {
 details summary h2 {
     line-height: 1 !important;
     margin: 0 !important;
-    margin-top: calc(-1 * var(--theme-spacing-1)) !important;
     pointer-events: none;
 }
 
