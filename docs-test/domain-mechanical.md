@@ -6,10 +6,10 @@ The SPOKE Mechanical domain provides the physical foundation for robotic systems
 
 The Mechanical domain is organized into specialized subsystems:
 <div style={{ marginLeft: '2rem' }}>
-**1. Structure** \- Frames and panels that form the robot body  
-**2. Joints** \- Motion mechanisms including gears, belts, bearings, and actuators  
-**3. Wheels** \- Ground contact and mobility systems  
-**4. Grippers** \- End-effector mechanisms for manipulation
+**1.0 Structure** \- Frames and panels that form the robot body  
+**2.0 Joints** \- Motion mechanisms including gears, belts, bearings, and actuators  
+**3.0 Wheels** \- Ground contact and mobility systems  
+**4.0 Grippers** \- End-effector mechanisms for manipulation
 </div>
 Each subsystem provides:
 <div style={{ marginLeft: '2rem' }}>
@@ -28,7 +28,7 @@ Each subsystem provides:
 <div style={{ marginLeft: '2rem' }}>
 The Mechanical subsystems work together as a verified system:
 
-**1. Structure** provides the foundation, with mounting points designed for:
+**1.0 Structure** provides the foundation, with mounting points designed for:
 
 > Joint mechanisms at articulation points  
 > Motor mounts at actuation locations  
@@ -36,7 +36,7 @@ The Mechanical subsystems work together as a verified system:
 > Bearing housings at rotation points  
 > Gripper mounting at arm endpoints or tool positions
 
-**2. Joints** integrate motion systems through:
+**2.0 Joints** integrate motion systems through:
 
 > Standardized mounting to Structure interfaces  
 > Bearing support for all rotating elements  
@@ -44,14 +44,14 @@ The Mechanical subsystems work together as a verified system:
 > Protected enclosures preventing interference  
 > Linkages connecting to gripper mechanisms
 
-**3. Wheels** complete the mobility system with:
+**3.0 Wheels** complete the mobility system with:
 
 > Standardized hub interfaces to joint components  
 > Bearing-supported rotation  
 > Motor adapter compatibility  
 > Integration with Structure mounting points
 
-**4. Grippers** enable manipulation through:
+**4.0 Grippers** enable manipulation through:
 
 > Standardized mounting to Structure frames or arm assemblies  
 > Actuation integration via Joint mechanisms and motors  
@@ -69,13 +69,13 @@ This integration ensures that when you assemble mechanical components, mounting 
 <details>
 <summary>
 
-## 1. Structure
+## 1.0 Structure
 
 </summary>
 
 <div style={{ marginLeft: '2rem' }}>
 
-### **The Role of Structure**
+### **Overview**
 
 SPOKE Structure forms the skeleton and skin of the robot, providing:
 
@@ -86,10 +86,10 @@ SPOKE Structure forms the skeleton and skin of the robot, providing:
 
 Structure is made up of two primary components:
 
-> **1. Frames** \- modular building blocks  
-> **2. Panels** \- functional surfaces
+> **Frames** \- modular building blocks  
+> **Panels** \- functional surfaces
 
-### **1. Frames: Modular Building Blocks**
+### **1.1 Frames: Modular Building Blocks**
 <div style={{ marginLeft: '2rem' }}>
 **Frames** are the structural foundation, built from connectable sections:
 
@@ -103,7 +103,7 @@ Structure is made up of two primary components:
 > Complete enclosure capability protects robot internals  
 > Standardized connection interfaces enable frame-to-frame assembly
 </div>
-### **2. Panels: Functional Surfaces**
+### **1.2 Panels: Functional Surfaces**
 <div style={{ marginLeft: '2rem' }}>
 **Panels** attach to frames through standardized mounting patterns and serve multiple functions:
 
@@ -116,7 +116,7 @@ Structure is made up of two primary components:
 Panels use non-interfering mounting designs, enabling flexible configuration without mechanical conflicts.
 
 </div>
-### **Parametric Design System**
+### **1.3 Parametric Design System**
 <div style={{ marginLeft: '2rem' }}>
 All Structure components are fully parameterized for both standardization and customization.
 
@@ -145,9 +145,9 @@ To promote compatibility and reuse, parameters are grouped into standard sets:
 
 These values serve as starting points. Custom parameters can be defined for specialized applications.
 </div>
-### **Interface Standards**
+### **1.4 Interface Standards**
 <div style={{ marginLeft: '2rem' }}>
-SPOKE Structure uses **interface conformance** for compatibility:
+Structure uses **interface conformance** for compatibility:
 
 **Frame-to-Frame Interfaces**  
 Frames connect through standardized mating surfaces. Any frame presenting correct interface dimensions can connect to compatible frames, regardless of internal geometry.
@@ -163,7 +163,7 @@ Panels attach via standardized screw patterns and edge profiles. New panels work
 > All connect via standard 96 × 48mm interfaces  
 > Panels include integrated PCB mounting rails
 </div>
-### **Extensibility**
+### **1.5 Extensibility**
 <div style={{ marginLeft: '2rem' }}>
 Structure is a starting point, not a constraint:
 
@@ -180,21 +180,21 @@ Structure is a starting point, not a constraint:
 <details>
 <summary>
 
-## 2. Joints
+## 2.0 Joints
 
 </summary>
 
 <div style={{ marginLeft: '2rem' }}>
-### **The Role of Joints**
+### **Overview**
 
-SPOKE Joints enable controlled motion through mechanical power transmission:
+Joints enable controlled motion through mechanical power transmission:
 
 > **Rotation** \- Gears, pulleys, and direct drive systems  
 > **Translation** \- Belt drives and linear actuators  
 > **Articulation** \- Multi-axis motion for arms and mechanisms  
 > **Actuation integration** \- Motor mounting and coupling
 
-### **Motion Mechanisms**
+### **2.1 Motion Mechanisms**
 
 **Gears**
 
@@ -217,7 +217,7 @@ SPOKE Joints enable controlled motion through mechanical power transmission:
 > Encoder mounting provisions  
 > Cable routing for motor power and feedback
 
-### **Bearings: Motion Support**
+### **2.2 Bearings: Motion Support**
 
 Bearings are integral to all joint mechanisms, providing low-friction motion support:
 
@@ -243,7 +243,7 @@ Bearings are integral to all joint mechanisms, providing low-friction motion sup
 > Mount directly into Structure frames with verified fit  
 > Support wheel axles in mobility systems
 
-### **Motor Integration**
+### **2.3 Motor Integration**
 
 Motors connect to the mechanical domain through verified interfaces:
 
@@ -259,7 +259,7 @@ Motors connect to the mechanical domain through verified interfaces:
 > Bearing support integration  
 > Multiple wheel diameter compatibility
 
-### **Joint Protection and Mounting**
+### **2.4 Joint Protection and Mounting**
 
 All joint mechanisms include:
 
@@ -277,21 +277,21 @@ All joint mechanisms include:
 <details>
 <summary>
 
-## 3. Wheels
+## 3.0 Wheels
 
 </summary>
 
 <div style={{ marginLeft: '2rem' }}>
-### **The Role of Wheels**
+### **Overview**
 
-SPOKE Wheels provide ground contact and mobility:
+Wheels provide ground contact and mobility:
 
 > **Traction** \- Material and tread patterns for various surfaces  
 > **Mounting** \- Standardized hub interfaces  
 > **Integration** \- Verified compatibility with motor adapters and bearings  
 > **Protection** \- Guards for moving components
 
-### **Wheel Types**
+### **3.1 Wheel Types**
 
 **Drive Wheels**
 
@@ -314,7 +314,7 @@ SPOKE Wheels provide ground contact and mobility:
 > Standardized mounting hubs  
 > Compatible with standard motor adapters
 
-### **Wheel-Motor-Structure Integration**
+### **3.2 Wheel-Motor-Structure Integration**
 
 Complete verified integration path:
 
@@ -332,21 +332,21 @@ Complete verified integration path:
 <details>
 <summary>
 
-## 4. Grippers
+## 4.0 Grippers
 
 </summary>
 
 <div style={{ marginLeft: '2rem' }}>
-### **The Role of Grippers**
+### **Overview**
 
-SPOKE Grippers provide end-effector manipulation capabilities:
+Grippers provide end-effector manipulation capabilities:
 
 > **Grasping** \- Secure holding of objects with various geometries  
 > **Manipulation** \- Controlled positioning and orientation of held objects  
 > **Sensing integration** \- Force/tactile sensor mounting for feedback  
 > **Actuation coupling** \- Motor and servo integration for controlled motion
 
-### **Gripper Types**
+### **4.1 Gripper Types**
 
 **Parallel Jaw Grippers**
 
@@ -376,7 +376,7 @@ SPOKE Grippers provide end-effector manipulation capabilities:
 > Integration with motors/servos through Joint components  
 > Custom finger geometries and actuation patterns
 
-### **Gripper Integration**
+### **4.2 Gripper Integration**
 
 Grippers connect to the mechanical system through verified interfaces:
 
@@ -393,7 +393,7 @@ Grippers connect to the mechanical system through verified interfaces:
 > Sensors integrate for force and position feedback  
 > Cable routing maintains electrical connectivity
 
-### **Gripper Protection and Assembly**
+### **4.3 Gripper Protection and Assembly**
 
 All gripper mechanisms include:
 
