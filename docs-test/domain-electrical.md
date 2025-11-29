@@ -5,19 +5,19 @@
 The Electrical domain provides the energy and communication infrastructure for robotic systems. Without reliable power distribution and robust signal transmission, no robot can function. The Electrical domain solves the fundamental challenge: delivering the right power to the right place while maintaining clean, reliable communication between all system components.
 
 The Electrical domain is organized into specialized subsystems:
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 **1. Power** \- Energy storage, regulation, and distribution  
 **2. Controllers** \- Local processing and real-time control  
 **3. Compute** \- Central processing and AI computation
-</div>
+</Indent>
 
 Each subsystem provides:
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 **Assembly** \- Plug-and-play connections with pre-routed cable paths; no custom wiring harnesses to design  
 **Mounting** \- Integration with mechanical structures for secure placement  
 **Protection** \- Shielding and enclosure for sensitive electronics  
 **Integration** \- Standardized connectors, power rails, and communication buses with verified signal integrity and EMI characteristics
-</div>
+</Indent>
 
 
 
@@ -27,7 +27,7 @@ Each subsystem provides:
 ## **Integration**
 
 </summary>
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 The Electrical subsystems work together as a verified system:
 
 **1. Power** provides the energy foundation:
@@ -66,7 +66,7 @@ The Electrical subsystems work together as a verified system:
 > Auto-discovery means software recognizes hardware configuration
 
 This integration ensures that when you assemble electrical components, power reaches all devices, signals transmit reliably, and the computational layer can immediately work with the available hardware.
-</div>
+</Indent>
 
 </details>
 <details>
@@ -76,7 +76,7 @@ This integration ensures that when you assemble electrical components, power rea
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **The Role of Power**
 
 The entire robot's existence depends on power. SPOKE Power systems provide:
@@ -138,7 +138,7 @@ All power systems include:
 > Thermal management for high-current components  
 > Emergency shutdown capability  
 > Cable routing that prevents mechanical damage
-</div>
+</Indent>
 
 </details>
 
@@ -149,7 +149,7 @@ All power systems include:
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **The Role of Controllers**
 
 Inside the robot, local processing is handled by microcontrollers. These provide real-time control for actuators and sensors while communicating with the main compute module. Where specialized processing is required, FPGAs can sometimes be the perfect solution.
@@ -234,7 +234,7 @@ All controller systems include:
 > Cable routing with strain relief  
 > Test points for debugging  
 > Firmware update capability without disassembly
-</div>
+</Indent>
 
 </details>
 
@@ -245,7 +245,7 @@ All controller systems include:
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **The Role of Compute**
 
 The critical core of the robot is the main source of compute. This is where larger AI algorithms run. Typically these are Linux-based single-board computers (SBCs) that provide the intelligence and decision-making capability for the entire system.
@@ -329,7 +329,7 @@ All compute systems include:
 > Easy access for storage swapping and debugging  
 > Display/keyboard connectivity for local access  
 > Remote access capability for development and monitoring
-</div>
+</Indent>
 
 </details>
 

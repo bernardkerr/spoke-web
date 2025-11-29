@@ -5,20 +5,20 @@
 The SPOKE Computational domain provides the intelligence and control software that brings robotic systems to life. It transforms sensor data into understanding, decisions into actions, and individual components into coordinated behavior. The Computational domain solves the fundamental challenge: creating software that reliably controls hardware while remaining flexible enough to adapt to new tasks and configurations.
 
 The Computational domain is organized into specialized subsystems:
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 **1. Operating System & Middleware** \- Core software infrastructure and communication frameworks  
 **2. Control Software** \- Real-time control loops and motor coordination  
 **3. Perception & AI** \- Sensor processing, computer vision, and machine learning  
 **4. Autonomy & Planning** \- Decision-making, navigation, and task execution
-</div>
+</Indent>
 
 Each subsystem provides:
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 **Auto-configuration** \- Software automatically discovers and adapts to hardware  
 **Interfaces** \- APIs and protocols enable plug-and-play operation  
 **Reliability** \- Error handling and graceful degradation  
 **AI integration** \- Pre-trained models work with verified sensor configurations
-</div>
+</Indent>
 
 <details>
 <summary>
@@ -26,7 +26,7 @@ Each subsystem provides:
 ## Integration
 
 </summary>
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 The Computational subsystems work together as a verified system:
 
 **1. Operating System & Middleware** provides the foundation:
@@ -72,7 +72,7 @@ The Computational subsystems work together as a verified system:
 > Modular architecture allows customization without breaking integration
 
 This integration ensures that when you assemble computational components, software recognizes hardware automatically, AI models work with available sensors, and high-level autonomy can immediately command the physical robot.
-</div>
+</Indent>
 </details>
 <details>
 <summary>
@@ -81,7 +81,7 @@ This integration ensures that when you assemble computational components, softwa
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **The Role of OS & Middleware**
 
 The operating system and middleware layer provides the foundation for all robot software:
@@ -154,7 +154,7 @@ The foundation layer connects all computational elements:
 > Hardware abstraction layer queries available sensors and actuators  
 > ROS nodes launch based on detected configuration  
 > System ready for high-level control
-</div>
+</Indent>
 
 </details>
 
@@ -166,7 +166,7 @@ The foundation layer connects all computational elements:
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **The Role of Control Software**
 
 Control software bridges high-level commands and low-level hardware actuation:
@@ -226,7 +226,7 @@ Control software operates at the boundary between computation and physical actio
 > Motor controllers execute low-level actuation  
 > Sensor feedback closes control loops  
 > State estimator updates robot configuration
-</div>
+</Indent>
 
 </details>
 
@@ -238,7 +238,7 @@ Control software operates at the boundary between computation and physical actio
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **The Role of Perception & AI**
 
 Perception and AI systems enable robots to sense, understand, and learn from their environment:
@@ -318,7 +318,7 @@ AI systems connect sensing to understanding:
 > AI models process data for high-level understanding  
 > Results feed into autonomy and control systems  
 > Feedback loop enables continuous improvement
-</div>
+</Indent>
 
 </details>
 
@@ -330,7 +330,7 @@ AI systems connect sensing to understanding:
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **The Role of Autonomy & Planning**
 
 Autonomy software enables robots to make decisions and execute complex tasks:
@@ -410,6 +410,6 @@ Autonomy software orchestrates the entire robot system:
 > Control executes planned motions  
 > Behavior manager handles exceptions and priorities  
 > Monitoring tracks progress and system health
-</div>
+</Indent>
 
 </details>

@@ -5,19 +5,20 @@
 The SPOKE Mechanical domain provides the physical foundation for robotic systems. It addresses the fundamental challenges every robotics project faces: creating structure, enabling motion, and integrating components reliably.
 
 The Mechanical domain is organized into specialized subsystems:
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 **1.0 Structure** \- Frames and panels that form the robot body  
 **2.0 Joints** \- Motion mechanisms including gears, belts, bearings, and actuators  
 **3.0 Wheels** \- Ground contact and mobility systems  
 **4.0 Grippers** \- End-effector mechanisms for manipulation
-</div>
+</Indent>
 Each subsystem provides:
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 **Assembly** \- Standardized screws and fasteners enable easy assembly, maintenance, and modification  
 **Mounting** \- Standardized attachment points for components, sensors, and processors  
 **Protection** \- Enclosure and shielding for sensitive elements  
 **Integration** \- Provides cable routing and connector locations for electrical components
-</div>
+</Indent>
+
 
 <details>
 <summary>
@@ -25,7 +26,7 @@ Each subsystem provides:
 ## Integration
 
 </summary>
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 The Mechanical subsystems work together as a verified system:
 
 **1.0 Structure** provides the foundation, with mounting points designed for:
@@ -64,7 +65,7 @@ The Mechanical subsystems work together as a verified system:
 > **Computational:** Encoder feedback and control signals integrate seamlessly
 
 This integration ensures that when you assemble mechanical components, mounting aligns, motion is unobstructed, and connections to other domains work without custom adaptation.
-</div>
+</Indent>
 </details>
 <details>
 <summary>
@@ -73,7 +74,7 @@ This integration ensures that when you assemble mechanical components, mounting 
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 
 ### **Overview**
 
@@ -90,7 +91,7 @@ Structure is made up of two primary components:
 > **Panels** \- functional surfaces
 
 ### **1.1 Frames: Modular Building Blocks**
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 **Frames** are the structural foundation, built from connectable sections:
 
 > **Core sections** provide central structure and primary mounting  
@@ -102,9 +103,9 @@ Structure is made up of two primary components:
 > Open internal volume maximizes space for components and wiring  
 > Complete enclosure capability protects robot internals  
 > Standardized connection interfaces enable frame-to-frame assembly
-</div>
+</Indent>
 ### **1.2 Panels: Functional Surfaces**
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 **Panels** attach to frames through standardized mounting patterns and serve multiple functions:
 
 > Protective outer surfaces  
@@ -115,9 +116,9 @@ Structure is made up of two primary components:
 
 Panels use non-interfering mounting designs, enabling flexible configuration without mechanical conflicts.
 
-</div>
+</Indent>
 ### **1.3 Parametric Design System**
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 All Structure components are fully parameterized for both standardization and customization.
 
 #### **Standard Size Sets**
@@ -144,9 +145,9 @@ To promote compatibility and reuse, parameters are grouped into standard sets:
 *Rationale:* Lighter structure for limbs, appendages, or compact platforms.
 
 These values serve as starting points. Custom parameters can be defined for specialized applications.
-</div>
+</Indent>
 ### **1.4 Interface Standards**
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 Structure uses **interface conformance** for compatibility:
 
 **Frame-to-Frame Interfaces**  
@@ -162,17 +163,17 @@ Panels attach via standardized screw patterns and edge profiles. New panels work
 > Specialized rear caster frame  
 > All connect via standard 96 × 48mm interfaces  
 > Panels include integrated PCB mounting rails
-</div>
+</Indent>
 ### **1.5 Extensibility**
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 Structure is a starting point, not a constraint:
 
 > **Direct use:** Build from verified standard components
 > **Custom frames:** Create new geometries maintaining standard interfaces  
 > **Custom panels:** Design specialized panels conforming to frame interfaces  
 > **Full custom:** Define new dimensional standards for specialized applications
-</div>
-</div>
+</Indent>
+</Indent>
 
 </details>
 
@@ -184,7 +185,7 @@ Structure is a starting point, not a constraint:
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **Overview**
 
 Joints enable controlled motion through mechanical power transmission:
@@ -269,7 +270,7 @@ All joint mechanisms include:
 > Maintenance access provisions  
 > Bearing housings integrated into assemblies
 
-</div>
+</Indent>
 
 </details>
 
@@ -281,7 +282,7 @@ All joint mechanisms include:
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **Overview**
 
 Wheels provide ground contact and mobility:
@@ -324,7 +325,7 @@ Complete verified integration path:
 > Protective panels guard moving components  
 > Cable routing maintains electrical connectivity
 
-</div>
+</Indent>
 
 </details>
 
@@ -336,7 +337,7 @@ Complete verified integration path:
 
 </summary>
 
-<div style={{ marginLeft: '2rem' }}>
+<Indent>
 ### **Overview**
 
 Grippers provide end-effector manipulation capabilities:
@@ -403,6 +404,6 @@ All gripper mechanisms include:
 > Access for finger replacement or adjustment  
 > Modular finger designs for task-specific swapping
 
-</div>
+</Indent>
 
 </details>
