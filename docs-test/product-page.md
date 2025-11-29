@@ -13,7 +13,9 @@
   dimensions="64 x 120 x 96mm"
 />
 
-<QRCode value="https://spoke-robot.com" />
+<QRCode
+  text="https://spoke-robotics.com/set=999"
+/>
 
 <SetPage
   setNumber="012650"

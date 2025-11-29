@@ -8,6 +8,7 @@ export default function FloatingTOC({ minHeadings = 3 }) {
   const [activeId, setActiveId] = useState('')
   const [isVisible, setIsVisible] = useState(false)
   const [position, setPosition] = useState('top') // 'top' | 'middle' | 'bottom' | 'hidden'
+  const [expandedIds, setExpandedIds] = useState(new Set())
 
   useEffect(() => {
     // Extract headings from the page
@@ -35,22 +36,58 @@ export default function FloatingTOC({ minHeadings = 3 }) {
         used.add(candidate)
         return candidate
       }
-      const headingData = Array.from(headingElements)
+
+      const detailsMap = new Map() // details element -> controlling heading ID
+
+      const rawHeadings = Array.from(headingElements)
         // Exclude headings that live inside containers explicitly marked to be ignored by TOC
         .filter((el) => !el.closest('[data-toc-exclude]'))
         .map((heading) => {
           const id = ensureId(heading)
+          const summary = heading.closest('summary')
+          const isCollapsible = !!summary
+
+          if (isCollapsible) {
+            const details = summary.closest('details')
+            if (details) {
+              detailsMap.set(details, id)
+            }
+          }
+
           return {
             id,
             text: heading.textContent,
             level: parseInt(heading.tagName.charAt(1)),
-            element: heading
+            element: heading,
+            isCollapsible,
+            requiredOpenIds: []
           }
         })
         .filter(heading => heading.id)
 
-      setHeadings(headingData)
-      setIsVisible(headingData.length >= minHeadings)
+      // Second pass: Calculate requiredOpenIds (ancestor details that must be open)
+      rawHeadings.forEach(h => {
+        let el = h.element.parentElement
+        while (el) {
+          if (el.tagName === 'DETAILS') {
+            // Check if we are in the summary of this details
+            const summary = el.querySelector('summary')
+            if (summary && summary.contains(h.element)) {
+              // We are in the summary, so we don't depend on this details being open
+            } else {
+              // We are in the content, so we depend on this details
+              const controllerId = detailsMap.get(el)
+              if (controllerId) {
+                h.requiredOpenIds.push(controllerId)
+              }
+            }
+          }
+          el = el.parentElement
+        }
+      })
+
+      setHeadings(rawHeadings)
+      setIsVisible(rawHeadings.length >= minHeadings)
     }
 
     // Wait for content to be rendered
@@ -88,6 +125,38 @@ export default function FloatingTOC({ minHeadings = 3 }) {
     return () => observer.disconnect()
   }, [headings])
 
+  // Sync expanded state with details elements
+  useEffect(() => {
+    const updateState = (id, isOpen) => {
+      setExpandedIds(prev => {
+        const next = new Set(prev)
+        if (isOpen) next.add(id)
+        else next.delete(id)
+        return next
+      })
+    }
+
+    const cleanupFns = []
+
+    headings.forEach(h => {
+      if (h.isCollapsible && h.element) {
+        const details = h.element.closest('details')
+        if (details) {
+          // Sync initial state
+          if (details.open) {
+            setExpandedIds(prev => new Set(prev).add(h.id))
+          }
+
+          const onToggle = () => updateState(h.id, details.open)
+          details.addEventListener('toggle', onToggle)
+          cleanupFns.push(() => details.removeEventListener('toggle', onToggle))
+        }
+      }
+    })
+
+    return () => cleanupFns.forEach(fn => fn())
+  }, [headings])
+
   // Persisted placement across the site
   useEffect(() => {
     try {
@@ -122,18 +191,37 @@ export default function FloatingTOC({ minHeadings = 3 }) {
   const handleHeadingClick = (id) => {
     const element = document.getElementById(id)
     if (element) {
-      // Check if the heading is inside a details element
-      const detailsElement = element.closest('details')
-      if (detailsElement && !detailsElement.open) {
-        // Open the details element if it's closed
-        detailsElement.open = true
-      }
-
-      // Get the element's position and account for navbar height
       const navbarHeight = 70 // Approximate navbar + padding
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
       const offsetPosition = elementPosition - navbarHeight
 
+      // Check if this specific heading is a trigger for a details element (inside summary)
+      const summary = element.closest('summary')
+      if (summary) {
+        const details = summary.closest('details')
+        if (details) {
+          // Toggle the details element
+          const willOpen = !details.open
+          details.open = willOpen
+
+          // Only scroll if we are opening it
+          if (willOpen) {
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            })
+          }
+          return
+        }
+      }
+
+      // Not a trigger, but might be inside a closed details element
+      const parentDetails = element.closest('details')
+      if (parentDetails && !parentDetails.open) {
+        parentDetails.open = true
+      }
+
+      // Standard scroll for content items
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
@@ -251,54 +339,73 @@ export default function FloatingTOC({ minHeadings = 3 }) {
           </Text>
           <ScrollArea type="hover" style={{ maxHeight: '60vh' }}>
             <Box as="nav">
-              {headings.map((heading) => (
-                <Box
-                  key={heading.id}
-                  mb="1"
-                  style={{
-                    paddingLeft: `${(heading.level - 1) * 12}px`
-                  }}
-                >
-                  <Text
-                    size="1"
-                    as="button"
-                    onClick={() => handleHeadingClick(heading.id)}
+              {headings.map((heading) => {
+                // Check visibility: all required ancestor details must be open
+                const isVisible = heading.requiredOpenIds.every(id => expandedIds.has(id))
+                if (!isVisible) return null
+
+                return (
+                  <Box
+                    key={heading.id}
+                    mb="1"
                     style={{
-                      display: 'block',
-                      width: '100%',
-                      textAlign: 'left',
-                      border: 'none',
-                      borderBottom: 'none',
-                      background: 'none',
-                      padding: '4px 8px',
-                      borderRadius: 'var(--radius-2)',
-                      cursor: 'pointer',
-                      boxShadow: 'none',
-                      outline: 'none',
-                      textDecoration: 'none',
-                      color: activeId === heading.id
-                        ? 'var(--accent-11)'
-                        : 'var(--gray-12)',
-                      backgroundColor: activeId === heading.id
-                        ? 'var(--accent-3)'
-                        : 'transparent',
-                      transition: 'all 0.2s ease'
-                    }}
-                    onMouseEnter={(e) => {
-                      if (activeId !== heading.id) {
-                        e.target.style.backgroundColor = 'var(--gray-4)'
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (activeId !== heading.id) {
-                        e.target.style.backgroundColor = 'transparent'
-                      }
+                      paddingLeft: `${(heading.level - 1) * 12}px`
                     }}
                   >
-                    {heading.text}
-                  </Text>
-                </Box>
-              ))}
+                    <Text
+                      size="1"
+                      as="button"
+                      onClick={() => handleHeadingClick(heading.id)}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        width: '100%',
+                        textAlign: 'left',
+                        border: 'none',
+                        borderBottom: 'none',
+                        background: 'none',
+                        padding: '4px 8px',
+                        borderRadius: 'var(--radius-2)',
+                        cursor: 'pointer',
+                        boxShadow: 'none',
+                        outline: 'none',
+                        textDecoration: 'none',
+                        color: activeId === heading.id
+                          ? 'var(--accent-11)'
+                          : 'var(--gray-12)',
+                        backgroundColor: activeId === heading.id
+                          ? 'var(--accent-3)'
+                          : 'transparent',
+                        transition: 'all 0.2s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        if (activeId !== heading.id) {
+                          e.currentTarget.style.backgroundColor = 'var(--gray-4)'
+                        }
+                      }}
+                      onMouseLeave={(e) => {
+                        if (activeId !== heading.id) {
+                          e.currentTarget.style.backgroundColor = 'transparent'
+                        }
+                      }}
+                    >
+                      {heading.isCollapsible && (
+                        <span style={{
+                          display: 'inline-flex',
+                          marginRight: '6px',
+                          transform: expandedIds.has(heading.id) ? 'translateY(-1px) rotate(90deg)' : 'translateY(-1px)',
+                          transition: 'transform 0.2s ease'
+                        }}>
+                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                          </svg>
+                        </span>
+                      )}
+                      {heading.text}
+                    </Text>
+                  </Box>
+                )
+              })}
             </Box>
           </ScrollArea>
         </Box>
