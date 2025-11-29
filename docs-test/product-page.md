@@ -14,7 +14,7 @@
 />
 
 <QRCode
-  text="https://spoke-robotics.com/set=166611"
+  text="https://spoke-robotics.com/set=6686"
 />
 
 <SetPage
