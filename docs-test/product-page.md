@@ -13,14 +13,6 @@
   dimensions="64 x 120 x 96mm"
 />
 
-<QRCode
-  text="https://spoke-robotics.com/set=6686"
-/>
-
-test 4
-test 5
-
-
 <SetPage
   setNumber="012650"
   title="Two Wheeler"
