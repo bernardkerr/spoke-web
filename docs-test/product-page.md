@@ -14,7 +14,7 @@
 />
 
 <QRCode
-  text="https://spoke-robotics.com/set=999"
+  text="https://spoke-robotics.com/set=6686"
 />
 
 test 4
