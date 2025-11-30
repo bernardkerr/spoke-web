@@ -2,7 +2,11 @@ name: Deploy to GitHub Pages
 
 on:
   push:
+<<<<<<< Updated upstream
     branches: [ '**' ]
+=======
+    branches: [ "**" ]
+>>>>>>> Stashed changes
   workflow_dispatch:
 
 permissions:
