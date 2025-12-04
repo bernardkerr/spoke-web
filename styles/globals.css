@@ -893,6 +893,78 @@ html {
 .prose {
   line-height: 1.7;
   font-size: var(--theme-typography-font-size-2);
+  font-weight: 500;
+  color: var(--theme-colors-neutral-neutral-11);
+}
+
+.prose a {
+  color: var(--theme-colors-neutral-neutral-12);
+  text-decoration: underline dotted var(--theme-colors-neutral-neutral-8);
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: auto;
+  transition: color 0.15s ease;
+}
+
+.prose a:hover {
+  color: var(--theme-colors-accent-accent-11);
+  text-decoration: underline dotted var(--theme-colors-accent-accent-11);
+  text-decoration-skip-ink: auto;
+}
+
+.prose a:visited {
+  color: var(--theme-colors-neutral-neutral-12);
+}
+
+/* Prevent underlines on list markers */
+.prose ol,
+.prose ul {
+  list-style-position: outside;
+  padding-left: 1.5em;
+}
+
+.prose li {
+  padding-left: 0.5em;
+}
+
+.prose ol>li::marker,
+.prose ul>li::marker {
+  text-decoration: none !important;
+}
+
+/* Ensure strong tags inside links inherit the link color */
+.prose a strong {
+  color: inherit;
+}
+
+/* Ensure anchor links in headings don't look like regular links */
+.prose .anchor-link {
+  text-decoration: none;
+  border: none;
+  color: inherit;
+  cursor: default;
+}
+
+.prose .anchor-link:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+
+/* Breadcrumb styling */
+.breadcrumb-container strong {
+  color: var(--theme-colors-neutral-neutral-12);
+  font-weight: 600;
+}
+
+.breadcrumb-container a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.breadcrumb-container a:hover {
+  color: var(--theme-colors-neutral-neutral-12) !important;
+  text-decoration: underline dotted var(--theme-colors-neutral-neutral-12) !important;
 }
 
 /* Explicit heading scale inside prose to ensure consistent hierarchy */

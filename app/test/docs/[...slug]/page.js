@@ -42,6 +42,37 @@ export default async function DocPage({ params }) {
   const fallbackTitle = slug.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
   const pageTitle = derivedTitle || fallbackTitle
 
+  // Extract Breadcrumb component if it exists at the start of content
+  const breadcrumbMatch = cleanedSource.match(/^<Breadcrumb\s+([^>]+)\/>\s*\n*/i)
+  let breadcrumbProps = null
+  let contentWithoutBreadcrumb = cleanedSource
+
+  if (breadcrumbMatch) {
+    // Extract the props from the Breadcrumb tag
+    const propsString = breadcrumbMatch[1]
+    // Parse paths array and current props
+    const pathsMatch = propsString.match(/paths=\{(\[[^\]]+\])\}/)
+    const currentMatch = propsString.match(/current="([^"]+)"/)
+
+    if (pathsMatch && currentMatch) {
+      try {
+        // Parse the paths array - it's in the format [{...}, {...}]
+        const pathsArrayString = pathsMatch[1]
+        const paths = JSON.parse(pathsArrayString.replace(/(\w+):/g, '"$1":'))
+
+        breadcrumbProps = {
+          paths: paths,
+          current: currentMatch[1]
+        }
+      } catch (e) {
+        console.error('Failed to parse breadcrumb paths:', e)
+      }
+    }
+
+    // Remove the Breadcrumb from the content
+    contentWithoutBreadcrumb = cleanedSource.replace(breadcrumbMatch[0], '')
+  }
+
   // Determine layout
   const layout = (fm && (fm.layout || fm.renderer)) || undefined
 
@@ -49,6 +80,25 @@ export default async function DocPage({ params }) {
     <>
       <Section size="2">
         <Box mx="auto" style={{ maxWidth: 1200, width: '100%' }} data-content-version={CONTENT_VERSION}>
+          {breadcrumbProps && (
+            <Box mb="2" className="breadcrumb-container" style={{
+              fontSize: 'var(--theme-typography-font-size-2)',
+              color: 'var(--theme-colors-neutral-neutral-9)',
+              fontWeight: 400,
+            }}>
+              {breadcrumbProps.paths && breadcrumbProps.paths.map((path, index) => (
+                <span key={index}>
+                  <a href={path.href} style={{ color: 'inherit', textDecoration: 'none' }}>
+                    {path.label}
+                  </a>
+                  <span> / </span>
+                </span>
+              ))}
+              <strong style={{ color: 'var(--theme-colors-neutral-neutral-12)', fontWeight: 600 }}>
+                {breadcrumbProps.current}
+              </strong>
+            </Box>
+          )}
           <Box mb="5">
             <Heading size="8">{pageTitle}</Heading>
             {fm && fm.description && (
@@ -57,7 +107,7 @@ export default async function DocPage({ params }) {
           </Box>
 
           <article className="prose dark:prose-invert max-w-none">
-            <Mdx source={cleanedSource} layout={layout} />
+            <Mdx source={contentWithoutBreadcrumb} layout={layout} />
           </article>
           <Mermaid autoRender={true} />
         </Box>

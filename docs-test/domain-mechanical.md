@@ -1,3 +1,5 @@
+<Breadcrumb paths={[{ href: "/test/docs/ecosystem-overview/", label: "Ecosystem" }, { href: "/test/docs/domain-overview/", label: "Domains" }]} current="Mechanical" />
+
 # **Mechanical**
 
 ## **Overview**

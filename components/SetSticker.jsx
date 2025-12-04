@@ -96,6 +96,7 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                         letterSpacing: '0.02em',
                         position: 'relative',
                         top: '1px',
+                        color: 'var(--theme-colors-neutral-neutral-12)',
                     }}
                 >
                     {setNumber}
@@ -115,6 +116,7 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                         fontWeight: 'bold',
                         lineHeight: '1.1',
                         marginBottom: '4px',
+                        color: 'var(--theme-colors-neutral-neutral-12)',
                     }}
                 >
                     {title}
@@ -123,6 +125,7 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                     style={{
                         fontSize: '1rem',
                         lineHeight: '1.1',
+                        color: 'var(--theme-colors-neutral-neutral-12)',
                     }}
                 >
                     Set
@@ -142,6 +145,7 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                         fontWeight: 'bold',
                         lineHeight: '1.1',
                         marginBottom: '4px',
+                        color: 'var(--theme-colors-neutral-neutral-12)',
                     }}
                 >
                     {units}
@@ -150,6 +154,7 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                     style={{
                         fontSize: '1rem',
                         lineHeight: '1.1',
+                        color: 'var(--theme-colors-neutral-neutral-12)',
                     }}
                 >
                     Units
@@ -169,6 +174,7 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                         fontWeight: 'bold',
                         lineHeight: '1.1',
                         marginBottom: '4px',
+                        color: 'var(--theme-colors-neutral-neutral-12)',
                     }}
                 >
                     {parts}
@@ -177,6 +183,7 @@ export default function SetSticker({ setNumber, title, units, parts, qrcode, ima
                     style={{
                         fontSize: '1rem',
                         lineHeight: '1.1',
+                        color: 'var(--theme-colors-neutral-neutral-12)',
                     }}
                 >
                     Parts
