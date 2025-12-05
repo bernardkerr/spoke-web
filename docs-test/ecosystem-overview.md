@@ -18,6 +18,19 @@ The **SPOKE** Composer software will verify your new robot design before you bui
 
 **Make Better Robots.**
 
+<SetPage
+  setNumber="012652"
+  title="Four Wheeler"
+  price="$699.00"
+  units="3"
+  unitText="1x Core, 2x Two Wheeler"
+  parts="154"
+  partsText="154 x Standard Parts"
+  imageFolder="set-012652"
+  description="Small four wheel robot with wireless charging"
+  features="Four wheels,Battery power,Charging,ESP32 compute"
+  dimensions="64 x 120 x 96mm"
+/>
 
 <SetSticker
   setNumber="012652"
